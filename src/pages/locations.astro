@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+
+const locations = [
+  { name: 'Orlando', description: 'Downtown, College Park, Thornton Park, Mills 50' },
+  { name: 'Winter Park', description: 'Including Baldwin Park and surrounding areas' },
+  { name: 'Kissimmee', description: 'Celebration, Poinciana, and nearby communities' },
+  { name: 'Lake Nona', description: 'Medical City, Laureate Park, and Nona Park' },
+  { name: 'Dr. Phillips', description: 'Bay Hill, Sand Lake, and Restaurant Row area' },
+  { name: 'Windermere', description: 'Including Isleworth and Butler Bay' },
+  { name: 'Ocoee', description: 'West Orange County communities' },
+  { name: 'Winter Garden', description: 'Horizon West and surrounding areas' },
+  { name: 'Altamonte Springs', description: 'Including Longwood and Forest City' },
+  { name: 'Sanford', description: 'Historic downtown and Lake Mary area' },
+  { name: 'Clermont', description: 'South Lake County communities' },
+  { name: 'Apopka', description: 'Northwest Orange County areas' },
+];
+---
+
+<Layout title="Locations" description="Orlando Concrete Coating serves Orlando and Central Florida including Winter Park, Kissimmee, Lake Nona, and surrounding areas.">
+  <Hero
+    title="Service Areas"
+    subtitle="Proudly serving Orlando and Central Florida communities"
+    ctaText="Check If We Serve Your Area"
+  />
+
+  <!-- Main Service Area -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Orlando & Central Florida
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Based in Orlando, we provide professional concrete coating services throughout Central Florida.
+            Our team travels to residential and commercial properties within approximately 50 miles of downtown Orlando.
+          </p>
+          <p class="text-gray-600 mb-8">
+            Whether you're in a lakefront home in Windermere, a commercial space in downtown Orlando,
+            or anywhere in between, we bring the same level of quality and professionalism to every project.
+          </p>
+
+          <div class="bg-primary/5 rounded-xl p-6 mb-8">
+            <h3 class="font-semibold text-gray-900 mb-3">Not sure if we serve your area?</h3>
+            <p class="text-gray-600 mb-4">
+              Contact us and we'll let you know! We're always happy to discuss projects
+              in surrounding areas.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center text-primary font-medium hover:text-primary-dark"
+            >
+              Contact Us
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="bg-gray-200 rounded-xl aspect-square flex items-center justify-center">
+          <div class="text-center p-8">
+            <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <p class="text-gray-500 font-medium">Central Florida Service Area</p>
+            <p class="text-sm text-gray-400 mt-2">Orlando and surrounding 50-mile radius</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities We Serve -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Communities We Serve</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          From urban Orlando to suburban communities, we bring professional concrete coating services to your doorstep.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {locations.map((location) => (
+          <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="flex items-start space-x-3">
+              <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">{location.name}</h3>
+                <p class="text-sm text-gray-600">{location.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Types by Area -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Services Available in All Areas</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          We offer our complete range of services throughout our service area.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🏠</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Residential</h3>
+          <p class="text-gray-600">Garage floors, basements, patios, driveways, and pool decks for homeowners.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🏢</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Commercial</h3>
+          <p class="text-gray-600">Retail spaces, restaurants, showrooms, offices, and medical facilities.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🏭</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Industrial</h3>
+          <p class="text-gray-600">Warehouses, manufacturing facilities, hangars, and distribution centers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Serving Your Neighborhood
+      </h2>
+      <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+        Ready to transform your concrete floors? Contact us for a free quote - we come to you!
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg"
+      >
+        Request a Free Quote
+      </a>
+    </div>
+  </section>
+</Layout>

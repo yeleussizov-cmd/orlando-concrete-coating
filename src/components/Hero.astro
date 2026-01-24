@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  backgroundImage?: string;
+}
+
+const {
+  title,
+  subtitle,
+  ctaText = "Get a Free Quote",
+  ctaLink = "/contact",
+  backgroundImage
+} = Astro.props;
+---
+
+<section class="relative bg-gradient-to-br from-primary to-primary-dark text-white py-20 md:py-32">
+  {backgroundImage && (
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-20"
+      style={`background-image: url(${backgroundImage})`}
+    />
+  )}
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+      {title}
+    </h1>
+    {subtitle && (
+      <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+        {subtitle}
+      </p>
+    )}
+    {ctaText && (
+      <a
+        href={ctaLink}
+        class="inline-block bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg hover:shadow-xl"
+      >
+        {ctaText}
+      </a>
+    )}
+  </div>
+</section>

@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+---
+
+<Layout title="Home">
+  <Hero
+    title="Transform Your Concrete Floors"
+    subtitle="Professional epoxy and polyaspartic coating services in Orlando. Durable, beautiful floors that last for years."
+  />
+
+  <!-- Services Overview -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          We specialize in high-quality concrete coating solutions for residential and commercial properties.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard
+          title="Epoxy Floor Coatings"
+          description="Transform your garage or commercial space with our premium epoxy coatings. Chemical resistant, easy to clean, and built to last."
+          icon="🏠"
+          link="/services"
+        />
+        <ServiceCard
+          title="Polyaspartic Coatings"
+          description="Fast-curing, UV-stable coatings perfect for Florida's climate. Same-day return to service available."
+          icon="⚡"
+          link="/services"
+        />
+        <ServiceCard
+          title="Decorative Concrete"
+          description="Stamped, stained, and polished concrete options to enhance your patios, driveways, and interior floors."
+          icon="✨"
+          link="/services"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 md:py-24 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Why Choose Orlando Concrete Coating?
+          </h2>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Licensed & Insured</h3>
+                <p class="text-gray-600">Fully licensed and insured for your peace of mind.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Premium Materials</h3>
+                <p class="text-gray-600">We use only top-quality, commercial-grade coatings.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Warranty Included</h3>
+                <p class="text-gray-600">All our work is backed by a comprehensive warranty.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Local Experts</h3>
+                <p class="text-gray-600">Orlando-based team with extensive Florida experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-xl p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+          <p class="text-gray-600 mb-6">
+            Contact us today for a free, no-obligation quote. We'll assess your space and provide recommendations tailored to your needs.
+          </p>
+          <a
+            href="/contact"
+            class="inline-block w-full text-center bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Get Your Free Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Proudly Serving Orlando & Central Florida
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+        From downtown Orlando to the surrounding communities, we bring professional concrete coating services to homes and businesses throughout Central Florida.
+      </p>
+      <a
+        href="/locations"
+        class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors"
+      >
+        View Our Service Areas
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Transform Your Space Today
+      </h2>
+      <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+        Don't settle for cracked, stained concrete. Get a beautiful, durable floor that will last for years.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg"
+      >
+        Schedule Your Free Consultation
+      </a>
+    </div>
+  </section>
+</Layout>
