@@ -4,11 +4,11 @@ import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 ---
 
-<Layout title="Epoxy & Concrete Floor Coatings in Orlando, FL" description="Orlando's top-rated concrete coating company. Premium epoxy garage floors, polyaspartic coatings, pool deck resurfacing & commercial flooring. Free estimates in Central Florida. Call (407) 555-0123.">
+<Layout title="Orlando's #1 Epoxy & Concrete Floor Coating Contractor" description="Orlando's top-rated concrete coating contractor — 4.9★ rated, 500+ projects. Epoxy garage floors, polyaspartic coatings, pool deck resurfacing & commercial flooring. Licensed & insured. Free estimates — (407) 555-0123." preloadImage="/images/hero-garage.webp">
   <Hero
     title="Premium Concrete Coatings for Orlando Homes & Businesses"
     subtitle="Durable epoxy, polyaspartic, and decorative floor coatings backed by a 15-year warranty. Serving Central Florida since 2014."
-    backgroundImage="/images/hero-garage.png"
+    backgroundImage="/images/hero-garage.webp"
   />
 
   <!-- Trust Badges -->
@@ -51,19 +51,19 @@ import ServiceCard from '../components/ServiceCard.astro';
           title="Epoxy Floor Coatings"
           description="High-performance, chemical-resistant epoxy systems for garages, basements, and commercial spaces. Multiple colors, metallic finishes, and flake options available."
           icon="fa-solid fa-layer-group"
-          link="/services"
+          link="/services/epoxy-floor-coating"
         />
         <ServiceCard
           title="Polyaspartic Coatings"
           description="Fast-curing, UV-stable coatings ideal for Florida's sun. Same-day return to service with superior abrasion resistance. Perfect for outdoor applications."
           icon="fa-solid fa-bolt"
-          link="/services"
+          link="/services/polyaspartic-coating"
         />
         <ServiceCard
           title="Decorative Concrete"
           description="Stained, stamped, and polished concrete solutions that turn ordinary floors into design statements. Ideal for patios, entryways, and retail spaces."
           icon="fa-solid fa-palette"
-          link="/services"
+          link="/services/decorative-concrete"
         />
       </div>
     </div>
@@ -76,9 +76,13 @@ import ServiceCard from '../components/ServiceCard.astro';
         <!-- Before/After Image -->
         <div class="relative">
           <img
-            src="/images/before-after.png"
+            src="/images/before-after.webp"
+            srcset="/images/before-after-640w.webp 640w, /images/before-after.webp 1024w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             alt="Before and after garage floor epoxy coating transformation in Orlando"
             class="w-full shadow-2xl"
+            width="1024"
+            height="1024"
             loading="lazy"
           />
           <div class="absolute top-4 left-4 bg-primary/90 text-white px-4 py-2 font-heading text-xs uppercase tracking-wider">
@@ -151,19 +155,19 @@ import ServiceCard from '../components/ServiceCard.astro';
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="relative group overflow-hidden aspect-[4/3]">
-          <img src="/images/hero-garage.png" alt="Metallic epoxy garage floor coating in Orlando FL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <img src="/images/hero-garage.webp" srcset="/images/hero-garage-640w.webp 640w, /images/hero-garage.webp 1024w" sizes="(max-width: 1024px) 100vw, 33vw" alt="Metallic epoxy garage floor coating in Orlando FL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="1024" height="1024" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
             <span class="text-white font-heading text-sm uppercase tracking-wider">Metallic Epoxy Garage</span>
           </div>
         </div>
         <div class="relative group overflow-hidden aspect-[4/3]">
-          <img src="/images/commercial-floor.png" alt="Commercial warehouse concrete coating Orlando" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <img src="/images/commercial-floor.webp" srcset="/images/commercial-floor-640w.webp 640w, /images/commercial-floor.webp 1024w" sizes="(max-width: 1024px) 100vw, 33vw" alt="Commercial warehouse concrete coating Orlando" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="1024" height="1024" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
             <span class="text-white font-heading text-sm uppercase tracking-wider">Commercial Warehouse</span>
           </div>
         </div>
         <div class="relative group overflow-hidden aspect-[4/3]">
-          <img src="/images/pool-deck.png" alt="Pool deck concrete coating in Orlando Florida" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <img src="/images/pool-deck.webp" srcset="/images/pool-deck-640w.webp 640w, /images/pool-deck.webp 1024w" sizes="(max-width: 1024px) 100vw, 33vw" alt="Pool deck concrete coating in Orlando Florida" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="1024" height="1024" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
             <span class="text-white font-heading text-sm uppercase tracking-wider">Pool Deck Coating</span>
           </div>
@@ -244,7 +248,7 @@ import ServiceCard from '../components/ServiceCard.astro';
 
   <!-- CTA Section -->
   <section class="relative py-20 md:py-28 overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url(/images/texture-closeup.png)">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url(/images/texture-closeup.webp)">
       <div class="absolute inset-0 bg-primary/90"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

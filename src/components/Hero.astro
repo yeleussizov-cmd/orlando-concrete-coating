@@ -16,15 +16,27 @@ const {
   backgroundImage,
   compact = false
 } = Astro.props;
+
+// Derive mobile image path (e.g., /images/hero-garage.webp -> /images/hero-garage-640w.webp)
+const mobileImage = backgroundImage?.replace('.webp', '-640w.webp');
 ---
 
 <section class:list={["relative overflow-hidden", compact ? "py-16 md:py-24" : "py-24 md:py-40"]}>
   <!-- Background image -->
   {backgroundImage ? (
-    <div
-      class="absolute inset-0 bg-cover bg-center"
-      style={`background-image: url(${backgroundImage})`}
-    >
+    <div class="absolute inset-0">
+      <img
+        src={backgroundImage}
+        srcset={`${mobileImage} 640w, ${backgroundImage} 1024w`}
+        sizes="100vw"
+        alt=""
+        role="presentation"
+        class="absolute inset-0 w-full h-full object-cover"
+        width="1024"
+        height="1024"
+        fetchpriority="high"
+        decoding="async"
+      />
       <div class="absolute inset-0 bg-primary/80"></div>
     </div>
   ) : (

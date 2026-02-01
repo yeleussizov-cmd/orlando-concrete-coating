@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+
+const faqs = [
+  { q: "What types of decorative concrete finishes do you offer?", a: "We offer acid-stained concrete, water-based stains, stamped concrete overlays, polished concrete, metallic epoxy, and decorative flake systems. Each finish can be customized with a wide range of colors, patterns, and textures to match your design vision." },
+  { q: "Can decorative concrete be applied to existing slabs?", a: "Yes. Most decorative systems — including stains, overlays, and polished finishes — can be applied over existing concrete. We assess the slab condition during your free consultation and recommend the best approach based on the current surface." },
+  { q: "How durable is decorative concrete in Florida's climate?", a: "Very durable when properly installed. Our decorative systems include UV-stable topcoats that resist fading and yellowing. We select materials specifically formulated for Florida's heat, humidity, and UV exposure to ensure lasting beauty." },
+  { q: "Is stamped concrete overlay the same as stamped concrete?", a: "No. Traditional stamped concrete is poured and stamped during initial construction. Stamped overlays are applied over existing concrete slabs, giving you the same decorative look without the cost and disruption of a full tear-out and repour." },
+  { q: "How do I maintain a decorative concrete floor?", a: "Maintenance is simple — regular sweeping and occasional mopping with a pH-neutral cleaner. We recommend resealing outdoor surfaces every 2–3 years and indoor surfaces every 3–5 years to maintain appearance and protection." },
+  { q: "How much does decorative concrete cost in Orlando?", a: "Pricing varies by finish type and surface condition. Acid staining starts around $4–$8 per square foot, stamped overlays $8–$15, and polished concrete $5–$12. We provide free detailed estimates with no hidden fees." }
+];
+---
+
+<Layout title="Decorative Concrete Orlando FL — Stained, Stamped & Polished" description="Decorative concrete solutions in Orlando: acid staining, stamped overlays, polished concrete & metallic finishes. Transform patios, entryways & showrooms. Free estimates — (407) 555-0123." preloadImage="/images/patio-coating.webp">
+  <Hero
+    title="Decorative Concrete in Orlando"
+    subtitle="Stained, stamped, and polished concrete finishes that transform ordinary slabs into design statements"
+    backgroundImage="/images/patio-coating.webp"
+    compact
+  />
+
+  <!-- What's Included -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">What's Included</h2>
+          <p class="text-lg text-concrete-light mb-8">Every decorative concrete project includes design consultation and premium materials tailored to your space.</p>
+          <ul class="space-y-3">
+            {[
+              'Free design consultation and color sampling',
+              'Surface assessment and moisture testing',
+              'Diamond grinding or shot blasting preparation',
+              'Crack repair and surface leveling',
+              'Premium stain, overlay, or polishing application',
+              'Custom color blending and pattern work',
+              'UV-stable sealer or topcoat (2 coats)',
+              'Anti-slip treatment for outdoor surfaces',
+              'Decorative scoring and border options',
+              'Final quality inspection and walkthrough',
+              'Written 15-year warranty',
+              'Maintenance schedule and care guide'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="relative">
+          <img src="/images/patio-coating.webp" srcset="/images/patio-coating-640w.webp 640w, /images/patio-coating.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Decorative stained concrete patio in Orlando" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Problems We Solve -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Common Problems We Solve</h2>
+        <p class="text-lg text-concrete-light max-w-2xl mx-auto">Homeowners and business owners come to us when their concrete needs both protection and a design upgrade.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: 'fa-solid fa-eye-slash', title: 'Ugly Gray Concrete', desc: 'Plain concrete is functional but uninspiring. Our decorative finishes turn boring slabs into design features that elevate your entire space.' },
+          { icon: 'fa-solid fa-sun', title: 'Faded Outdoor Surfaces', desc: "Florida's UV fades paint and cheap stains quickly. Our UV-stable systems maintain vibrant color for years without reapplication." },
+          { icon: 'fa-solid fa-house-crack', title: 'Cracked & Damaged Slabs', desc: "Decorative overlays cover existing damage while adding beauty. No need for expensive tear-out — we transform what's already there." },
+          { icon: 'fa-solid fa-money-bill', title: 'High Renovation Costs', desc: 'Natural stone and tile are expensive. Decorative concrete delivers the same high-end look at a fraction of the cost.' },
+          { icon: 'fa-solid fa-droplet', title: 'Stained & Discolored Floors', desc: 'Years of stains and discoloration make concrete look neglected. Staining and overlays give you a fresh, uniform finish.' }
+        ].map((item) => (
+          <div class="bg-surface p-8 border-b-4 border-transparent hover:border-accent transition-all">
+            <i class={`${item.icon} text-accent text-2xl mb-4 block`}></i>
+            <h3 class="font-heading font-bold text-primary text-lg uppercase tracking-wider mb-3">{item.title}</h3>
+            <p class="text-concrete-light text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="py-20 md:py-28 topo-bg relative">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Our Decorative Concrete Process</h2>
+        <p class="text-white/60 max-w-2xl mx-auto">From design consultation to final sealer, every step is executed with artisan-level attention to detail.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        {[
+          { icon: 'fa-solid fa-palette', step: '1', title: 'Design', desc: 'Color selection, pattern choices, and on-site mock-ups' },
+          { icon: 'fa-solid fa-gears', step: '2', title: 'Preparation', desc: 'Diamond grinding, crack repair, and surface profiling' },
+          { icon: 'fa-solid fa-paint-roller', step: '3', title: 'Base Coat', desc: 'Stain, overlay, or primer application with color work' },
+          { icon: 'fa-solid fa-gem', step: '4', title: 'Detail Work', desc: 'Scoring, patterns, texture application, and blending' },
+          { icon: 'fa-solid fa-shield-halved', step: '5', title: 'Seal & Protect', desc: 'UV-stable topcoat, anti-slip treatment, and final inspection' }
+        ].map((item) => (
+          <div class="text-center">
+            <div class="w-16 h-16 bg-accent skew-x-[-4deg] flex items-center justify-center mx-auto mb-5">
+              <i class={`${item.icon} text-primary text-xl skew-x-[4deg]`}></i>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-white uppercase tracking-wider mb-2">{item.step}. {item.title}</h3>
+            <p class="text-white/60 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div class="relative">
+          <img src="/images/before-after.webp" srcset="/images/before-after-640w.webp 640w, /images/before-after.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Decorative concrete before and after" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Why Choose Us for Decorative Concrete</h2>
+          <div class="space-y-5">
+            {[
+              { icon: 'fa-solid fa-palette', title: 'Design Expertise', desc: 'Our team has completed hundreds of decorative projects across Central Florida. We help you select the perfect finish for your space and style.' },
+              { icon: 'fa-solid fa-dollar-sign', title: 'Transparent Pricing', desc: 'Detailed quotes with no surprise charges. We walk you through every cost before work begins.' },
+              { icon: 'fa-solid fa-sun', title: 'Florida-Tested Materials', desc: 'Every product we use is selected for UV stability, moisture resistance, and performance in Florida conditions.' },
+              { icon: 'fa-solid fa-medal', title: '15-Year Warranty', desc: 'Our warranty protects your investment against peeling, delamination, and material failure.' }
+            ].map((item) => (
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <i class={`${item.icon} text-accent text-sm`}></i>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-primary uppercase text-sm tracking-wider">{item.title}</h3>
+                  <p class="text-concrete-light text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Decorative Concrete FAQs</h2>
+      </div>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <details class="group bg-surface p-6">
+            <summary class="flex items-center justify-between cursor-pointer list-none">
+              <h3 class="font-heading font-bold text-primary text-sm uppercase tracking-wider pr-4">{faq.q}</h3>
+              <i class="fa-solid fa-chevron-down text-accent text-xs group-open:rotate-180 transition-transform flex-shrink-0"></i>
+            </summary>
+            <p class="text-concrete-light text-sm leading-relaxed mt-4">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  })} />
+
+  <!-- Service Area -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Decorative Concrete Service Area</h2>
+      <p class="text-lg text-concrete-light max-w-3xl mx-auto mb-8">We create beautiful decorative concrete finishes for homes and businesses across greater Orlando.</p>
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        {['Orlando', 'Winter Park', 'Kissimmee', 'Lake Nona', 'Dr. Phillips', 'Windermere', 'Ocoee', 'Sanford', 'Clermont', 'Altamonte Springs', 'Apopka', 'Winter Garden'].map((city) => (
+          <span class="bg-surface px-4 py-2 font-heading text-xs uppercase tracking-wider text-concrete border border-surface-dark">
+            <i class="fa-solid fa-location-dot text-accent mr-1"></i>{city}
+          </span>
+        ))}
+      </div>
+      <a href="/locations" class="inline-flex items-center gap-2 text-accent font-heading font-bold text-sm uppercase tracking-wider hover:gap-3 transition-all">
+        View All Service Areas <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">Transform Your Concrete Into Art</h2>
+      <p class="text-xl text-concrete-light max-w-2xl mx-auto mb-10">Schedule a free design consultation and see samples of our decorative concrete finishes in person.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-block bg-accent hover:bg-accent-dark text-primary px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-arrow-right"></i>Get Your Free Quote</span>
+        </a>
+        <a href="tel:4075550123" class="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i>(407) 555-0123</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

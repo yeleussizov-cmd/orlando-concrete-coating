@@ -3,11 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<Layout title="About Us - Orlando's Trusted Concrete Coating Company" description="Learn about Orlando Concrete Coating — locally owned, licensed & insured. 10+ years of experience transforming concrete floors across Central Florida.">
+<Layout title="About Orlando Concrete Coating — Licensed & Insured Since 2014" description="Locally owned, licensed & insured concrete coating company in Orlando, FL. 10+ years experience, 500+ projects, 4.9★ Google rating. Epoxy & polyaspartic specialists serving Central Florida." preloadImage="/images/team-work.webp">
   <Hero
     title="About Orlando Concrete Coating"
     subtitle="Locally owned. Veteran craftsmanship. Dedicated to transforming Central Florida's floors since 2014."
-    backgroundImage="/images/team-work.png"
+    backgroundImage="/images/team-work.webp"
     compact
   />
 
@@ -30,9 +30,13 @@ import Hero from '../components/Hero.astro';
         </div>
         <div class="relative">
           <img
-            src="/images/team-work.png"
+            src="/images/team-work.webp"
+            srcset="/images/team-work-640w.webp 640w, /images/team-work.webp 1024w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             alt="Orlando Concrete Coating team installing epoxy floor"
             class="w-full shadow-2xl"
+            width="1024"
+            height="1024"
             loading="lazy"
           />
           <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 -z-10"></div>
@@ -96,9 +100,13 @@ import Hero from '../components/Hero.astro';
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         <div class="relative">
           <img
-            src="/images/texture-closeup.png"
+            src="/images/texture-closeup.webp"
+            srcset="/images/texture-closeup-640w.webp 640w, /images/texture-closeup.webp 1024w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             alt="Close-up of metallic epoxy concrete coating finish"
             class="w-full shadow-2xl"
+            width="1024"
+            height="1024"
             loading="lazy"
           />
           <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 -z-10"></div>

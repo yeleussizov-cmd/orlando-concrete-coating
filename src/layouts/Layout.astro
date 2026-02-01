@@ -6,9 +6,10 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
+  preloadImage?: string;
 }
 
-const { title, description = "Orlando's premier concrete coating contractor. Epoxy garage floors, polyaspartic coatings, pool deck resurfacing & commercial flooring. Free estimates. Call (407) 555-0123." } = Astro.props;
+const { title, description = "Orlando's premier concrete coating contractor. Epoxy garage floors, polyaspartic coatings, pool deck resurfacing & commercial flooring. Free estimates. Call (407) 555-0123.", preloadImage } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, 'https://orlandoconcretecoating.com');
 ---
 
@@ -28,37 +29,246 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://orlandoconcretecoating
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
 
-    <!-- Fonts -->
+    <!-- Preload LCP hero image — mobile gets smaller file -->
+    {preloadImage && (
+      <>
+        <link rel="preload" as="image" href={preloadImage.replace('.webp', '-640w.webp')} type="image/webp" media="(max-width: 640px)" fetchpriority="high" />
+        <link rel="preload" as="image" href={preloadImage} type="image/webp" media="(min-width: 641px)" fetchpriority="high" />
+      </>
+    )}
+
+    <!-- Critical CSS: above-fold layout, header, hero, fonts, colors -->
+    <style is:inline>
+      /* Font declarations for instant text rendering */
+      @font-face{font-family:'Oswald';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2) format('woff2')}
+      @font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/sourcesans3/v15/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Ky462EM.woff2) format('woff2')}
+
+      /* Core layout & colors */
+      :root{--color-primary:#1a1a2e;--color-accent:#d4a437;--color-surface:#f5f0eb;--color-concrete:#3a3a3a}
+      *,*::before,*::after{box-sizing:border-box;margin:0}
+      body{font-family:'Source Sans 3',system-ui,sans-serif;background:var(--color-surface);color:var(--color-concrete);min-height:100vh;display:flex;flex-direction:column}
+
+      /* Header: prevent layout shift */
+      .top-bar-critical{background:var(--color-primary);height:40px}
+      header{background:#fff;position:sticky;top:0;z-index:50;border-bottom:4px solid var(--color-accent);height:72px}
+
+      /* Hero: reserve space to prevent CLS */
+      .hero-critical{position:relative;overflow:hidden;padding:6rem 0;background:var(--color-primary)}
+      .hero-critical h1{font-family:'Oswald',system-ui,sans-serif;font-weight:700;color:#fff;line-height:1.1}
+
+      /* Fade-up animation */
+      @keyframes fade-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+      .animate-fade-up{animation:fade-up .6s ease-out both}
+
+      /* Skewed elements */
+      .skew-critical{transform:skewX(-4deg)}
+      .skew-critical>*{transform:skewX(4deg)}
+    </style>
+
+    <!-- Fonts: preconnect + async load (non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome: async load (non-blocking) -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" /></noscript>
 
     <title>{title} | Orlando Concrete Coating</title>
 
-    <!-- Schema.org Local Business -->
+    <!-- Schema.org Local Business + Service Catalog -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
+      "@id": "https://orlandoconcretecoating.com/#business",
       "name": "Orlando Concrete Coating",
+      "alternateName": "Orlando Concrete Coating LLC",
+      "description": "Orlando's premier concrete coating contractor specializing in epoxy floor coatings, polyaspartic coatings, decorative concrete, pool deck resurfacing, and commercial flooring. Licensed & insured. Free estimates.",
       "telephone": "(407) 555-0123",
       "email": "info@orlandoconcretecoating.com",
       "url": "https://orlandoconcretecoating.com",
-      "areaServed": {
-        "@type": "City",
-        "name": "Orlando",
-        "addressRegion": "FL"
-      },
+      "logo": "https://orlandoconcretecoating.com/favicon.svg",
+      "image": "https://orlandoconcretecoating.com/images/hero-garage.webp",
+      "foundingDate": "2014",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Check",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Orlando",
         "addressRegion": "FL",
+        "postalCode": "32801",
         "addressCountry": "US"
       },
-      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
-      "priceRange": "$$"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.5383",
+        "longitude": "-81.3792"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Orlando", "addressRegion": "FL" },
+        { "@type": "City", "name": "Winter Park", "addressRegion": "FL" },
+        { "@type": "City", "name": "Kissimmee", "addressRegion": "FL" },
+        { "@type": "City", "name": "Sanford", "addressRegion": "FL" },
+        { "@type": "City", "name": "Lake Nona", "addressRegion": "FL" },
+        { "@type": "City", "name": "Clermont", "addressRegion": "FL" },
+        { "@type": "City", "name": "Ocoee", "addressRegion": "FL" },
+        { "@type": "City", "name": "Altamonte Springs", "addressRegion": "FL" },
+        { "@type": "City", "name": "Winter Garden", "addressRegion": "FL" },
+        { "@type": "City", "name": "Apopka", "addressRegion": "FL" },
+        { "@type": "City", "name": "Windermere", "addressRegion": "FL" },
+        { "@type": "City", "name": "Dr. Phillips", "addressRegion": "FL" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Concrete Coating Services",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Residential Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Epoxy Floor Coating",
+                  "description": "Premium 100% solids commercial-grade epoxy floor coating systems with metallic, flake, and solid color options. Chemical resistant, hot tire pickup resistant, 15+ year durability.",
+                  "url": "https://orlandoconcretecoating.com/services/epoxy-floor-coating",
+                  "provider": { "@id": "https://orlandoconcretecoating.com/#business" },
+                  "areaServed": { "@type": "State", "name": "Florida" },
+                  "serviceType": "Epoxy Floor Coating"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Polyaspartic Floor Coating",
+                  "description": "Fast-curing polyaspartic coatings with same-day return to service. UV stable, scratch resistant, and ideal for outdoor surfaces including pool decks and patios.",
+                  "url": "https://orlandoconcretecoating.com/services/polyaspartic-coating",
+                  "provider": { "@id": "https://orlandoconcretecoating.com/#business" },
+                  "serviceType": "Polyaspartic Coating"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Decorative Concrete",
+                  "description": "Acid-stained finishes, stamped concrete overlays, and polished concrete solutions for residential and commercial spaces.",
+                  "url": "https://orlandoconcretecoating.com/services/decorative-concrete",
+                  "provider": { "@id": "https://orlandoconcretecoating.com/#business" },
+                  "serviceType": "Decorative Concrete"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Garage Floor Coating",
+                  "description": "Complete garage floor transformations with metallic epoxy or full-flake systems. Hot tire resistant, chemical resistant, and easy to clean.",
+                  "url": "https://orlandoconcretecoating.com/services/garage-floor-coating",
+                  "provider": { "@id": "https://orlandoconcretecoating.com/#business" },
+                  "serviceType": "Garage Floor Coating"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pool Deck Resurfacing",
+                  "description": "Slip-resistant, cool-to-the-touch pool deck coatings engineered for Florida's UV, chlorine, and weather conditions. Safety tested for slip resistance.",
+                  "url": "https://orlandoconcretecoating.com/services/pool-deck-resurfacing",
+                  "provider": { "@id": "https://orlandoconcretecoating.com/#business" },
+                  "serviceType": "Pool Deck Resurfacing"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Driveway Coating",
+                  "description": "Durable driveway coatings that resist oil stains, tire marks, and Florida weather damage. Curb appeal upgrades with long-lasting protection.",
+                  "url": "https://orlandoconcretecoating.com/services/driveway-coating",
+                  "provider": { "@id": "https://orlandoconcretecoating.com/#business" },
+                  "serviceType": "Driveway Coating"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Concrete Repair",
+                  "description": "Crack filling, joint repair, spalling correction, moisture testing, and surface leveling before coating application.",
+                  "url": "https://orlandoconcretecoating.com/services/concrete-repair",
+                  "provider": { "@id": "https://orlandoconcretecoating.com/#business" },
+                  "serviceType": "Concrete Repair"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Commercial & Industrial Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Commercial Flooring",
+                  "description": "High-traffic epoxy and polyaspartic flooring solutions for retail stores, restaurants, medical offices, and commercial facilities in Orlando.",
+                  "url": "https://orlandoconcretecoating.com/services/commercial-flooring",
+                  "provider": { "@id": "https://orlandoconcretecoating.com/#business" },
+                  "serviceType": "Commercial Floor Coating"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Industrial Flooring",
+                  "description": "Chemical-resistant, high-build epoxy systems for manufacturing plants, warehouses, aircraft hangars, auto shops, and distribution centers.",
+                  "url": "https://orlandoconcretecoating.com/services/industrial-flooring",
+                  "provider": { "@id": "https://orlandoconcretecoating.com/#business" },
+                  "serviceType": "Industrial Floor Coating"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Epoxy Floor Coating",
+        "Polyaspartic Coating",
+        "Decorative Concrete",
+        "Concrete Polishing",
+        "Pool Deck Resurfacing",
+        "Garage Floor Coating",
+        "Commercial Epoxy Flooring",
+        "Industrial Floor Coating",
+        "Concrete Repair",
+        "Metallic Epoxy",
+        "Flake Epoxy Systems"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/orlandoconcretecoating",
+        "https://www.instagram.com/orlandoconcretecoating",
+        "https://www.yelp.com/biz/orlando-concrete-coating"
+      ]
     })} />
   </head>
   <body class="min-h-screen flex flex-col bg-surface text-concrete font-body">

@@ -1,0 +1,235 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+
+const faqs = [
+  { q: "How long does epoxy floor coating last in Orlando's climate?", a: "Our commercial-grade 100% solids epoxy systems last 15–20 years with proper maintenance. Unlike hardware-store kits, our coatings are formulated for Florida's heat, humidity, and UV exposure." },
+  { q: "What's the difference between epoxy and polyaspartic coatings?", a: "Epoxy offers a thicker, more chemical-resistant base layer and is generally more affordable. Polyaspartic cures faster (same-day return to service) and has superior UV stability. We often combine both in a hybrid system for maximum durability." },
+  { q: "How long does epoxy floor installation take?", a: "Most residential projects take 2–3 days including surface preparation, coating application, and cure time. We provide a detailed timeline during your free consultation so there are no surprises." },
+  { q: "Can epoxy be applied over existing coatings or paint?", a: "In most cases, yes — but the existing coating must be properly removed or abraded first. Our diamond grinding process ensures a clean profile for maximum adhesion regardless of the existing surface." },
+  { q: "Is epoxy flooring slippery when wet?", a: "Our standard broadcast flake and quartz systems include a textured topcoat that provides excellent slip resistance. We also offer additional anti-slip additives for areas prone to moisture." },
+  { q: "How much does epoxy floor coating cost in Orlando?", a: "Pricing depends on square footage, surface condition, and finish selection. Most residential garage floors range from $5–$12 per square foot. We provide free, transparent written estimates with no hidden fees." }
+];
+---
+
+<Layout title="Epoxy Floor Coating Orlando FL — 15-Year Warranty" description="Premium 100% solids epoxy floor coating in Orlando. Chemical-resistant, hot tire resistant garage & commercial floors. Free estimates — (407) 555-0123." preloadImage="/images/hero-garage.webp">
+  <Hero
+    title="Epoxy Floor Coating in Orlando"
+    subtitle="Commercial-grade 100% solids epoxy systems that resist chemicals, stains, and hot tire pickup — backed by our 15-year warranty"
+    backgroundImage="/images/hero-garage.webp"
+    compact
+  />
+
+  <!-- What's Included -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">What's Included</h2>
+          <p class="text-lg text-concrete-light mb-8">Every epoxy floor coating project includes a comprehensive scope of work — no hidden fees, no surprise charges.</p>
+          <ul class="space-y-3">
+            {[
+              'Free on-site consultation and moisture testing',
+              'Diamond grinding surface preparation',
+              'Crack and joint repair',
+              'Primer coat for maximum adhesion',
+              '100% solids commercial-grade epoxy base coat',
+              'Decorative flake, metallic, or quartz broadcast',
+              'UV-stable polyaspartic or polyurethane topcoat',
+              'Anti-slip texture additive',
+              'Expansion joint re-cutting and caulking',
+              'Final quality inspection and walkthrough',
+              'Written 15-year warranty',
+              'Detailed care and maintenance guide'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/hero-garage.webp"
+            srcset="/images/hero-garage-640w.webp 640w, /images/hero-garage.webp 1024w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            alt="Epoxy floor coating application in Orlando garage"
+            class="w-full shadow-2xl"
+            width="1024"
+            height="1024"
+            loading="lazy"
+          />
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Problems We Solve -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Common Problems We Solve</h2>
+        <p class="text-lg text-concrete-light max-w-2xl mx-auto">Many customers come to us after dealing with these frustrating issues. Our commercial-grade systems address every one of them.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: 'fa-solid fa-circle-xmark', title: 'Peeling & Flaking Coatings', desc: 'Previous coatings failed due to poor surface prep or cheap materials. Our diamond grinding and 100% solids formula prevent delamination.' },
+          { icon: 'fa-solid fa-oil-can', title: 'Oil & Chemical Stains', desc: 'Bare concrete absorbs oil, grease, and chemicals permanently. Our epoxy creates an impermeable barrier that wipes clean.' },
+          { icon: 'fa-solid fa-car', title: 'Hot Tire Pickup', desc: 'Hot tires peel up cheap coatings. Our systems are specifically tested for hot tire resistance in Florida temperatures.' },
+          { icon: 'fa-solid fa-droplet', title: 'Moisture & Humidity Issues', desc: "Florida's high water table causes coating failures. We moisture-test every slab and apply vapor barriers when needed." },
+          { icon: 'fa-solid fa-broom', title: 'Dusty, Hard-to-Clean Floors', desc: 'Bare concrete generates dust and traps dirt. Epoxy seals the surface for easy cleaning with just a mop and water.' },
+          { icon: 'fa-solid fa-timeline', title: 'Cracking & Deterioration', desc: 'Aging concrete develops cracks and spalling. We repair all damage before coating so your floor looks — and performs — like new.' }
+        ].map((item) => (
+          <div class="bg-surface p-8 border-b-4 border-transparent hover:border-accent transition-all">
+            <i class={`${item.icon} text-accent text-2xl mb-4 block`}></i>
+            <h3 class="font-heading font-bold text-primary text-lg uppercase tracking-wider mb-3">{item.title}</h3>
+            <p class="text-concrete-light text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="py-20 md:py-28 topo-bg relative">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Our Epoxy Coating Process</h2>
+        <p class="text-white/60 max-w-2xl mx-auto">Proper surface preparation is the difference between a coating that lasts 2 years and one that lasts 20. Here's how we do it right.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        {[
+          { icon: 'fa-solid fa-clipboard-check', step: '1', title: 'Consultation', desc: 'Free on-site assessment, moisture testing, and detailed written estimate' },
+          { icon: 'fa-solid fa-gears', step: '2', title: 'Preparation', desc: 'Industrial diamond grinding to create the perfect surface profile' },
+          { icon: 'fa-solid fa-screwdriver-wrench', step: '3', title: 'Repair', desc: 'Crack filling, joint repair, and spalling correction' },
+          { icon: 'fa-solid fa-paint-roller', step: '4', title: 'Application', desc: 'Multi-coat epoxy system with your chosen decorative finish' },
+          { icon: 'fa-solid fa-circle-check', step: '5', title: 'Inspection', desc: 'Quality walkthrough, care instructions, and warranty documentation' }
+        ].map((item) => (
+          <div class="text-center">
+            <div class="w-16 h-16 bg-accent skew-x-[-4deg] flex items-center justify-center mx-auto mb-5">
+              <i class={`${item.icon} text-primary text-xl skew-x-[4deg]`}></i>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-white uppercase tracking-wider mb-2">{item.step}. {item.title}</h3>
+            <p class="text-white/60 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div class="relative">
+          <img
+            src="/images/before-after.webp"
+            srcset="/images/before-after-640w.webp 640w, /images/before-after.webp 1024w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            alt="Before and after epoxy floor coating in Orlando"
+            class="w-full shadow-2xl"
+            width="1024"
+            height="1024"
+            loading="lazy"
+          />
+          <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Why Choose Us for Epoxy Floor Coating</h2>
+          <div class="space-y-5">
+            {[
+              { icon: 'fa-solid fa-medal', title: '15-Year Warranty', desc: 'One of the strongest warranties in Central Florida. We stand behind every square foot of coating we install.' },
+              { icon: 'fa-solid fa-dollar-sign', title: 'Transparent Pricing', desc: 'Detailed written estimates with no hidden fees. The price we quote is the price you pay — guaranteed.' },
+              { icon: 'fa-solid fa-sun', title: 'Florida Climate Expertise', desc: "10+ years coating floors in Orlando's heat and humidity. We know which systems perform and which ones fail." },
+              { icon: 'fa-solid fa-comments', title: 'Clear Communication', desc: 'Same-day quote turnaround, daily project updates, and a dedicated project manager for every job.' }
+            ].map((item) => (
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <i class={`${item.icon} text-accent text-sm`}></i>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-primary uppercase text-sm tracking-wider">{item.title}</h3>
+                  <p class="text-concrete-light text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Epoxy Floor Coating FAQs</h2>
+      </div>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <details class="group bg-surface p-6">
+            <summary class="flex items-center justify-between cursor-pointer list-none">
+              <h3 class="font-heading font-bold text-primary text-sm uppercase tracking-wider pr-4">{faq.q}</h3>
+              <i class="fa-solid fa-chevron-down text-accent text-xs group-open:rotate-180 transition-transform flex-shrink-0"></i>
+            </summary>
+            <p class="text-concrete-light text-sm leading-relaxed mt-4">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  })} />
+
+  <!-- Service Area -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Epoxy Floor Coating Service Area</h2>
+      <p class="text-lg text-concrete-light max-w-3xl mx-auto mb-8">We install epoxy floor coatings throughout the greater Orlando area, including these communities.</p>
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        {['Orlando', 'Winter Park', 'Kissimmee', 'Lake Nona', 'Dr. Phillips', 'Windermere', 'Ocoee', 'Sanford', 'Clermont', 'Altamonte Springs', 'Apopka', 'Winter Garden'].map((city) => (
+          <span class="bg-surface px-4 py-2 font-heading text-xs uppercase tracking-wider text-concrete border border-surface-dark">
+            <i class="fa-solid fa-location-dot text-accent mr-1"></i>{city}
+          </span>
+        ))}
+      </div>
+      <a href="/locations" class="inline-flex items-center gap-2 text-accent font-heading font-bold text-sm uppercase tracking-wider hover:gap-3 transition-all">
+        View All Service Areas <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">Ready for a Flawless Epoxy Floor?</h2>
+      <p class="text-xl text-concrete-light max-w-2xl mx-auto mb-10">Get a free, no-obligation estimate. We'll assess your space and recommend the perfect epoxy system for your needs.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-block bg-accent hover:bg-accent-dark text-primary px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-arrow-right"></i>Get Your Free Quote</span>
+        </a>
+        <a href="tel:4075550123" class="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i>(407) 555-0123</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

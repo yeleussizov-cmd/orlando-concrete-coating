@@ -3,11 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<Layout title="Concrete Coating Services" description="Epoxy floor coatings, polyaspartic coatings, decorative concrete, pool deck resurfacing & commercial flooring in Orlando, FL. Licensed & insured. Free estimates.">
+<Layout title="Concrete Coating Services Orlando FL — Epoxy, Polyaspartic & More" description="Epoxy floor coatings, polyaspartic coatings, decorative concrete, pool deck resurfacing, driveway coating & commercial flooring in Orlando. 15-year warranty. Free estimates — (407) 555-0123." preloadImage="/images/commercial-floor.webp">
   <Hero
     title="Concrete Coating Services in Orlando"
     subtitle="Residential, commercial, and industrial coating solutions engineered for Florida's climate"
-    backgroundImage="/images/commercial-floor.png"
+    backgroundImage="/images/commercial-floor.webp"
     compact
   />
 
@@ -22,7 +22,7 @@ import Hero from '../components/Hero.astro';
             </div>
             <span class="font-heading text-accent text-xs uppercase tracking-widest font-bold">Most Popular</span>
           </div>
-          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Epoxy Floor Coatings</h2>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6"><a href="/services/epoxy-floor-coating">Epoxy Floor Coatings</a></h2>
           <p class="text-lg text-concrete-light mb-6">
             Our premium epoxy floor coating systems deliver a showroom-quality finish that resists chemicals, hot tire pickup, abrasion, and impact. We apply 100% solids commercial-grade epoxy &mdash; not the water-based products found at hardware stores.
           </p>
@@ -47,9 +47,13 @@ import Hero from '../components/Hero.astro';
         </div>
         <div class="relative">
           <img
-            src="/images/hero-garage.png"
+            src="/images/hero-garage.webp"
+            srcset="/images/hero-garage-640w.webp 640w, /images/hero-garage.webp 1024w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             alt="Premium metallic epoxy garage floor coating in Orlando FL"
             class="w-full shadow-2xl"
+            width="1024"
+            height="1024"
             loading="lazy"
           />
           <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 -z-10"></div>
@@ -64,9 +68,13 @@ import Hero from '../components/Hero.astro';
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         <div class="order-2 lg:order-1 relative">
           <img
-            src="/images/pool-deck.png"
+            src="/images/pool-deck.webp"
+            srcset="/images/pool-deck-640w.webp 640w, /images/pool-deck.webp 1024w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             alt="Polyaspartic pool deck coating in Orlando Florida"
             class="w-full shadow-2xl"
+            width="1024"
+            height="1024"
             loading="lazy"
           />
           <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 -z-10"></div>
@@ -78,7 +86,7 @@ import Hero from '../components/Hero.astro';
             </div>
             <span class="font-heading text-accent text-xs uppercase tracking-widest font-bold">Fast Curing</span>
           </div>
-          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Polyaspartic Coatings</h2>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6"><a href="/services/polyaspartic-coating">Polyaspartic Coatings</a></h2>
           <p class="text-lg text-concrete-light mb-6">
             Polyaspartic coatings cure in hours rather than days, offering superior UV stability that won't yellow in Florida's intense sun. These coatings can even be applied in extreme temperatures, making them the go-to choice for outdoor concrete surfaces.
           </p>
@@ -116,7 +124,7 @@ import Hero from '../components/Hero.astro';
             </div>
             <span class="font-heading text-accent text-xs uppercase tracking-widest font-bold">Premium Finish</span>
           </div>
-          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Decorative Concrete</h2>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6"><a href="/services/decorative-concrete">Decorative Concrete</a></h2>
           <p class="text-lg text-concrete-light mb-6">
             Elevate your space with decorative concrete solutions that combine beauty with durability. From acid-stained finishes to stamped patterns that mimic natural stone, we create floors that make a lasting impression.
           </p>
@@ -143,9 +151,13 @@ import Hero from '../components/Hero.astro';
         </div>
         <div class="relative">
           <img
-            src="/images/patio-coating.png"
+            src="/images/patio-coating.webp"
+            srcset="/images/patio-coating-640w.webp 640w, /images/patio-coating.webp 1024w"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             alt="Decorative concrete patio coating Orlando FL"
             class="w-full shadow-2xl"
+            width="1024"
+            height="1024"
             loading="lazy"
           />
           <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 -z-10"></div>
@@ -163,18 +175,19 @@ import Hero from '../components/Hero.astro';
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
-          { icon: 'fa-solid fa-warehouse', title: 'Garage Floor Coating', desc: 'Complete garage floor transformations with metallic epoxy or full-flake systems. Hot tire resistant and easy to clean.' },
-          { icon: 'fa-solid fa-water', title: 'Pool Deck Resurfacing', desc: 'Slip-resistant, cool-to-the-touch coatings that stand up to chlorine, UV, and Florida weather.' },
-          { icon: 'fa-solid fa-building', title: 'Commercial Flooring', desc: 'High-traffic solutions for retail, restaurants, medical offices, warehouses, and industrial facilities.' },
-          { icon: 'fa-solid fa-road', title: 'Driveway Coating', desc: 'Curb appeal upgrades with durable coatings that resist oil stains, tire marks, and weather damage.' },
-          { icon: 'fa-solid fa-screwdriver-wrench', title: 'Concrete Repair', desc: 'Crack filling, joint repair, spalling correction, and surface leveling before coating application.' },
-          { icon: 'fa-solid fa-industry', title: 'Industrial Flooring', desc: 'Chemical-resistant, high-build systems for manufacturing plants, hangars, and distribution centers.' },
+          { icon: 'fa-solid fa-warehouse', title: 'Garage Floor Coating', desc: 'Complete garage floor transformations with metallic epoxy or full-flake systems. Hot tire resistant and easy to clean.', link: '/services/garage-floor-coating' },
+          { icon: 'fa-solid fa-water', title: 'Pool Deck Resurfacing', desc: 'Slip-resistant, cool-to-the-touch coatings that stand up to chlorine, UV, and Florida weather.', link: '/services/pool-deck-resurfacing' },
+          { icon: 'fa-solid fa-building', title: 'Commercial Flooring', desc: 'High-traffic solutions for retail, restaurants, medical offices, warehouses, and industrial facilities.', link: '/services/commercial-flooring' },
+          { icon: 'fa-solid fa-road', title: 'Driveway Coating', desc: 'Curb appeal upgrades with durable coatings that resist oil stains, tire marks, and weather damage.', link: '/services/driveway-coating' },
+          { icon: 'fa-solid fa-screwdriver-wrench', title: 'Concrete Repair', desc: 'Crack filling, joint repair, spalling correction, and surface leveling before coating application.', link: '/services/concrete-repair' },
+          { icon: 'fa-solid fa-industry', title: 'Industrial Flooring', desc: 'Chemical-resistant, high-build systems for manufacturing plants, hangars, and distribution centers.', link: '/services/industrial-flooring' },
         ].map((service) => (
-          <div class="bg-surface p-8 border-b-4 border-transparent hover:border-accent transition-all">
+          <a href={service.link} class="bg-surface p-8 border-b-4 border-transparent hover:border-accent transition-all block">
             <i class={`${service.icon} text-accent text-2xl mb-4 block`}></i>
             <h3 class="font-heading font-bold text-primary text-lg uppercase tracking-wider mb-3">{service.title}</h3>
-            <p class="text-concrete-light text-sm leading-relaxed">{service.desc}</p>
-          </div>
+            <p class="text-concrete-light text-sm leading-relaxed mb-4">{service.desc}</p>
+            <span class="inline-flex items-center gap-2 text-accent font-heading font-bold text-sm uppercase tracking-wider">Learn More <i class="fa-solid fa-arrow-right text-xs"></i></span>
+          </a>
         ))}
       </div>
     </div>
