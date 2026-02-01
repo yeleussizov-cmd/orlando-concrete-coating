@@ -1,0 +1,217 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+
+const faqs = [
+  { q: "How much does concrete coating cost in Winter Park?", a: "Residential projects in Winter Park typically range from $5–$12 per square foot. Larger homes in Baldwin Park or along Park Avenue may have bigger garage or patio areas, but per-square-foot pricing remains consistent. We provide free on-site estimates." },
+  { q: "Do you work on historic Winter Park homes?", a: "Yes. We have experience working on older homes throughout Winter Park, including properties near Rollins College and the Park Avenue district. We assess older concrete for moisture, structural issues, and previous coatings before recommending the best system." },
+  { q: "Can you coat pool decks in Winter Park?", a: "Absolutely. Winter Park has a high concentration of homes with pools. Our slip-resistant, UV-stable polyaspartic coatings are ideal for pool decks and hold up to chlorine, sun exposure, and Florida's frequent afternoon rain." },
+  { q: "How long does the coating last in Winter Park's climate?", a: "Our systems last 15–20 years with proper maintenance. We use UV-stable topcoats that resist the yellowing and fading that Central Florida's sun causes on inferior products." },
+  { q: "Do you offer free estimates in Winter Park?", a: "Yes — we provide free on-site consultations throughout Winter Park, including Baldwin Park, Hannibal Square, and all surrounding neighborhoods. We bring samples, test your surface, and deliver a detailed written quote." }
+];
+---
+
+<Layout title="Concrete Coating Winter Park FL — Epoxy & Polyaspartic Floors" description="Professional concrete coating in Winter Park FL. Epoxy garage floors, polyaspartic coatings, pool deck resurfacing for Baldwin Park, Park Avenue & all Winter Park neighborhoods. Free estimates — (407) 555-0123." preloadImage="/images/patio-coating.webp">
+  <Hero
+    title="Concrete Coating in Winter Park, FL"
+    subtitle="Premium floor coatings for Winter Park's historic homes, lakefront estates, and thriving commercial districts"
+    backgroundImage="/images/patio-coating.webp"
+    compact
+  />
+
+  <!-- Local Service Area -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Concrete Coating Services in Winter Park</h2>
+          <p class="text-lg text-concrete-light mb-6">
+            Winter Park's tree-lined streets, chain of lakes, and charming architecture deserve flooring that matches the neighborhood's character. From the brick streets of Park Avenue to the master-planned community of Baldwin Park, we deliver concrete coatings that combine beauty with lasting durability.
+          </p>
+          <p class="text-concrete-light mb-6">
+            Many Winter Park homes feature older concrete that has developed cracks, stains, and moisture issues over the decades. Our team specializes in restoring these surfaces — repairing damage, applying commercial-grade coatings, and protecting floors against Central Florida's demanding climate for years to come.
+          </p>
+          <p class="text-concrete-light mb-8">
+            Whether you need a metallic epoxy garage floor in Baldwin Park, a decorative pool deck coating near Lake Virginia, or commercial flooring for a Park Avenue retail space, we bring the same premium materials and meticulous preparation to every Winter Park project.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/contact" class="inline-block bg-accent hover:bg-accent-dark text-primary px-8 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+              <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-arrow-right"></i>Free Winter Park Estimate</span>
+            </a>
+            <a href="tel:4075550123" class="inline-block bg-primary hover:bg-primary-light text-white px-8 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+              <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i>(407) 555-0123</span>
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/images/patio-coating.webp" srcset="/images/patio-coating-640w.webp 640w, /images/patio-coating.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Decorative concrete coating Winter Park FL" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Neighborhoods -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Winter Park Neighborhoods We Serve</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { area: 'Baldwin Park', desc: 'One of Orlando\'s most popular master-planned communities. We coat garage floors, patios, and driveways in this high-demand neighborhood.' },
+          { area: 'Park Avenue District', desc: 'Retail spaces, restaurants, and upscale residences. Decorative concrete and commercial-grade finishes for high-visibility locations.' },
+          { area: 'Hannibal Square', desc: 'A vibrant mix of residential and commercial properties. We provide coatings that complement the neighborhood\'s distinctive character.' },
+          { area: 'Lake Virginia / Rollins Area', desc: 'Lakefront homes and properties near Rollins College. Pool deck resurfacing and patio coatings are popular in this area.' },
+          { area: 'Via Tuscany / Tuscawilla', desc: 'Upscale residential communities with larger homes. Garage floors, pool decks, and outdoor living spaces are our most common projects.' },
+          { area: 'Mead Botanical Garden Area', desc: 'Established neighborhoods with mature landscaping. Older homes often need concrete repair before coating for the best results.' }
+        ].map((item) => (
+          <div class="bg-surface p-6 border-b-4 border-transparent hover:border-accent transition-all">
+            <h3 class="font-heading font-bold text-primary uppercase tracking-wider mb-2">{item.area}</h3>
+            <p class="text-concrete-light text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Directions -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Getting to Winter Park</h2>
+          <p class="text-concrete-light mb-6">
+            Winter Park is just minutes north of downtown Orlando, making it one of the most accessible communities in our service area. We serve all Winter Park properties efficiently from our Orlando base.
+          </p>
+          <div class="space-y-4">
+            {[
+              { landmark: 'From Downtown Orlando', directions: 'A quick 10-minute drive north via I-4 or Orange Avenue. We reach Baldwin Park and Park Avenue within minutes.' },
+              { landmark: 'From Rollins College', directions: 'Properties near Rollins, Lake Virginia, and Fairbanks Avenue are in the heart of our Winter Park coverage area.' },
+              { landmark: 'From Winter Park Village', directions: 'The shopping and dining hub on Orlando Avenue — we serve both commercial and residential properties throughout this corridor.' },
+              { landmark: 'From Full Sail University', directions: 'We cover the Full Sail area and all properties along University Boulevard into east Winter Park.' }
+            ].map((item) => (
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-route text-accent mt-1"></i>
+                <div>
+                  <h3 class="font-heading font-bold text-primary text-sm uppercase tracking-wider">{item.landmark}</h3>
+                  <p class="text-concrete-light text-sm mt-1">{item.directions}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/images/team-work.webp" srcset="/images/team-work-640w.webp 640w, /images/team-work.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Concrete coating team serving Winter Park" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weather Challenges -->
+  <section class="py-20 md:py-28 topo-bg relative">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Winter Park Climate Challenges</h2>
+        <p class="text-white/60 max-w-2xl mx-auto">Winter Park's lush tree canopy and chain of lakes create beautiful surroundings — but also contribute to specific concrete challenges.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { icon: 'fa-solid fa-tree', title: 'Tree Canopy Moisture', desc: 'Winter Park\'s famous oak canopy keeps surfaces shaded and damp, promoting mold and moisture issues. Our coatings seal out moisture permanently.' },
+          { icon: 'fa-solid fa-water', title: 'High Water Table', desc: 'Proximity to lakes raises the water table, pushing moisture through concrete slabs. We test and apply vapor barriers to prevent coating failure.' },
+          { icon: 'fa-solid fa-sun', title: 'UV Exposure', desc: 'Despite the tree canopy, many surfaces — especially pool decks and driveways — get intense Florida sun. Our UV-stable topcoats resist yellowing.' },
+          { icon: 'fa-solid fa-cloud-rain', title: 'Afternoon Storms', desc: 'Summer thunderstorms bring heavy rainfall. Our seamless coatings prevent water infiltration and protect against standing water damage.' }
+        ].map((item) => (
+          <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/10">
+            <i class={`${item.icon} text-accent text-2xl mb-4 block`}></i>
+            <h3 class="font-heading font-bold text-white uppercase tracking-wider text-sm mb-2">{item.title}</h3>
+            <p class="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Our Services in Winter Park</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { icon: 'fa-solid fa-layer-group', title: 'Epoxy Floor Coating', link: '/services/epoxy-floor-coating' },
+          { icon: 'fa-solid fa-bolt', title: 'Polyaspartic Coating', link: '/services/polyaspartic-coating' },
+          { icon: 'fa-solid fa-palette', title: 'Decorative Concrete', link: '/services/decorative-concrete' },
+          { icon: 'fa-solid fa-warehouse', title: 'Garage Floor Coating', link: '/services/garage-floor-coating' },
+          { icon: 'fa-solid fa-water', title: 'Pool Deck Resurfacing', link: '/services/pool-deck-resurfacing' },
+          { icon: 'fa-solid fa-road', title: 'Driveway Coating', link: '/services/driveway-coating' },
+          { icon: 'fa-solid fa-building', title: 'Commercial Flooring', link: '/services/commercial-flooring' },
+          { icon: 'fa-solid fa-industry', title: 'Industrial Flooring', link: '/services/industrial-flooring' },
+          { icon: 'fa-solid fa-screwdriver-wrench', title: 'Concrete Repair', link: '/services/concrete-repair' },
+        ].map((service) => (
+          <a href={service.link} class="flex items-center gap-4 bg-surface p-5 border-b-4 border-transparent hover:border-accent transition-all group">
+            <div class="w-10 h-10 bg-primary group-hover:bg-accent flex items-center justify-center skew-x-[-4deg] transition-colors flex-shrink-0">
+              <i class={`${service.icon} text-accent group-hover:text-primary text-sm skew-x-[4deg] transition-colors`}></i>
+            </div>
+            <span class="font-heading font-bold text-primary uppercase tracking-wider text-sm">{service.title}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Concrete Coating FAQs — Winter Park</h2>
+      </div>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <details class="group bg-surface p-6">
+            <summary class="flex items-center justify-between cursor-pointer list-none">
+              <h3 class="font-heading font-bold text-primary text-sm uppercase tracking-wider pr-4">{faq.q}</h3>
+              <i class="fa-solid fa-chevron-down text-accent text-xs group-open:rotate-180 transition-transform flex-shrink-0"></i>
+            </summary>
+            <p class="text-concrete-light text-sm leading-relaxed mt-4">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  })} />
+
+  <!-- CTA -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">Transform Your Winter Park Floor</h2>
+      <p class="text-xl text-concrete-light max-w-2xl mx-auto mb-10">Get a free estimate for your Winter Park home or business. We bring samples and deliver same-day quotes.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-block bg-accent hover:bg-accent-dark text-primary px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-arrow-right"></i>Get Your Free Quote</span>
+        </a>
+        <a href="tel:4075550123" class="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i>(407) 555-0123</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

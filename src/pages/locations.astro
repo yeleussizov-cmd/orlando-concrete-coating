@@ -3,18 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 
 const locations = [
-  { name: 'Orlando', areas: 'Downtown, College Park, Thornton Park, Mills 50, SODO' },
-  { name: 'Winter Park', areas: 'Baldwin Park, Hannibal Square, Park Avenue' },
-  { name: 'Kissimmee', areas: 'Celebration, Poinciana, St. Cloud' },
-  { name: 'Lake Nona', areas: 'Medical City, Laureate Park, Nona Park' },
-  { name: 'Dr. Phillips', areas: 'Bay Hill, Sand Lake, Restaurant Row' },
-  { name: 'Windermere', areas: 'Isleworth, Butler Bay, Horizon West' },
-  { name: 'Ocoee', areas: 'West Oaks, Fullers Cross, Meadow Woods' },
-  { name: 'Winter Garden', areas: 'Horizon West, Hamlin, Storey Park' },
-  { name: 'Altamonte Springs', areas: 'Longwood, Forest City, Wekiva Springs' },
-  { name: 'Sanford', areas: 'Lake Mary, Heathrow, Markham Woods' },
-  { name: 'Clermont', areas: 'Minneola, Groveland, Four Corners' },
-  { name: 'Apopka', areas: 'Wekiva, Rock Springs, Zellwood' },
+  { name: 'Orlando', areas: 'Downtown, College Park, Thornton Park, Mills 50, SODO', slug: 'orlando' },
+  { name: 'Winter Park', areas: 'Baldwin Park, Hannibal Square, Park Avenue', slug: 'winter-park' },
+  { name: 'Kissimmee', areas: 'Celebration, Poinciana, St. Cloud', slug: 'kissimmee' },
+  { name: 'Lake Nona', areas: 'Medical City, Laureate Park, Nona Park', slug: 'lake-nona' },
+  { name: 'Dr. Phillips', areas: 'Bay Hill, Sand Lake, Restaurant Row', slug: 'dr-phillips' },
+  { name: 'Windermere', areas: 'Isleworth, Butler Bay, Horizon West', slug: 'windermere' },
+  { name: 'Ocoee', areas: 'West Oaks, Fullers Cross, Meadow Woods', slug: 'ocoee' },
+  { name: 'Winter Garden', areas: 'Horizon West, Hamlin, Storey Park', slug: 'winter-garden' },
+  { name: 'Altamonte Springs', areas: 'Longwood, Forest City, Wekiva Springs', slug: 'altamonte-springs' },
+  { name: 'Sanford', areas: 'Lake Mary, Heathrow, Markham Woods', slug: 'sanford' },
+  { name: 'Clermont', areas: 'Minneola, Groveland, Four Corners', slug: 'clermont' },
+  { name: 'Apopka', areas: 'Wekiva, Rock Springs, Zellwood', slug: 'apopka' },
 ];
 ---
 
@@ -82,7 +82,7 @@ const locations = [
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {locations.map((location) => (
-          <div class="bg-surface p-6 border-b-4 border-transparent hover:border-accent transition-all group">
+          <a href={`/locations/${location.slug}`} class="bg-surface p-6 border-b-4 border-transparent hover:border-accent transition-all group block">
             <div class="flex items-start gap-3">
               <i class="fa-solid fa-location-dot text-accent mt-1"></i>
               <div>
@@ -90,7 +90,7 @@ const locations = [
                 <p class="text-sm text-concrete-light mt-1">{location.areas}</p>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

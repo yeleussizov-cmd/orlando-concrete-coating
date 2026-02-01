@@ -1,0 +1,208 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+
+const faqs = [
+  { q: "How much does concrete coating cost in Winter Garden?", a: "Residential concrete coating in Winter Garden typically ranges from $5–$12 per square foot. New construction homes with clean, uncured slabs may qualify for simplified prep, which can reduce cost. We provide free on-site estimates." },
+  { q: "Should I coat concrete in my new Horizon West home?", a: "Absolutely. New construction concrete in Horizon West and Hamlin benefits greatly from protective coatings. We recommend waiting 30 days after the slab pour, then applying a polyaspartic system that guards against moisture, stains, and wear from day one." },
+  { q: "Do you handle settling cracks in new construction?", a: "Yes — settling is common in Winter Garden's rapidly developing areas where newly graded sandy soil compacts over time. We repair minor cracks and apply flexible coatings that accommodate slight future movement without delaminating." },
+  { q: "What coating resists West Orange County's summer storms?", a: "Our seamless polyaspartic and epoxy systems are fully waterproof once cured. They prevent rain-driven moisture infiltration on garage floors, patios, and pool decks — critical for Winter Garden's intense afternoon thunderstorms." },
+  { q: "Do you offer free estimates in Winter Garden?", a: "Yes — we provide free on-site consultations throughout Winter Garden, Horizon West, Hamlin, and all surrounding communities. We test your slab, bring color samples, and deliver a written estimate with no obligation." }
+];
+---
+
+<Layout title="Concrete Coating Winter Garden FL — Epoxy & Polyaspartic Floors" description="Professional concrete coating in Winter Garden FL. Serving Horizon West, Hamlin, Storey Park & all West Orange County. Epoxy garage floors, pool deck resurfacing & commercial coatings. Free estimates — (407) 555-0123." preloadImage="/images/hero-garage.webp">
+  <Hero
+    title="Concrete Coating in Winter Garden, FL"
+    subtitle="Durable epoxy and polyaspartic coatings for Winter Garden's new homes, growing neighborhoods, and local businesses"
+    backgroundImage="/images/hero-garage.webp"
+    compact
+  />
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Concrete Coating Services in Winter Garden</h2>
+          <p class="text-lg text-concrete-light mb-6">
+            Winter Garden is one of the fastest-growing cities in Central Florida. The explosion of new construction in Horizon West, Hamlin, and surrounding master-planned communities means thousands of fresh concrete slabs that need protection from Florida's punishing sun, rain, and humidity.
+          </p>
+          <p class="text-concrete-light mb-6">
+            New construction homes face unique challenges: freshly graded sandy soil settles over time, causing minor slab movement and hairline cracks. Our flexible polyaspartic coatings accommodate this settling while providing a seamless, stain-resistant surface that protects your investment from day one.
+          </p>
+          <p class="text-concrete-light mb-8">
+            From garage floors in Hamlin to pool decks in Lakeshore, from downtown Winter Garden storefronts to commercial spaces at Winter Garden Village, we deliver coatings that perform in West Orange County's demanding climate.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/contact" class="inline-block bg-accent hover:bg-accent-dark text-primary px-8 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+              <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-arrow-right"></i>Free Winter Garden Estimate</span>
+            </a>
+            <a href="tel:4075550123" class="inline-block bg-primary hover:bg-primary-light text-white px-8 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+              <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i>(407) 555-0123</span>
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/images/hero-garage.webp" srcset="/images/hero-garage-640w.webp 640w, /images/hero-garage.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Garage floor coating in Winter Garden FL" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Winter Garden Neighborhoods We Serve</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { area: 'Horizon West', desc: 'Central Florida\'s largest new development area. We coat hundreds of garage floors, patios, and driveways in this rapidly expanding community every year.' },
+          { area: 'Hamlin', desc: 'The bustling town center of Horizon West with both residential and commercial spaces. Durable coatings for new homes and retail environments.' },
+          { area: 'Storey Park', desc: 'Growing master-planned community with modern homes. Garage floor coatings and patio resurfacing designed for new construction concrete.' },
+          { area: 'Lakeshore', desc: 'Lakefront living with beautiful outdoor spaces. Pool deck resurfacing, lanai coatings, and driveway systems that complement the waterfront lifestyle.' },
+          { area: 'Oakland Park', desc: 'Established neighborhood near historic downtown. We upgrade aging garage floors and patios while preserving the character of this charming community.' },
+          { area: 'Fowler Groves', desc: 'Named for Winter Garden\'s citrus heritage, this area blends old and new. Concrete repair and coating solutions for properties of every era.' }
+        ].map((item) => (
+          <div class="bg-surface p-6 border-b-4 border-transparent hover:border-accent transition-all">
+            <h3 class="font-heading font-bold text-primary uppercase tracking-wider mb-2">{item.area}</h3>
+            <p class="text-concrete-light text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Getting to Winter Garden</h2>
+          <p class="text-concrete-light mb-6">Winter Garden sits just west of Orlando along the SR-429 and SR-50 corridors, giving our team fast access to every neighborhood.</p>
+          <div class="space-y-4">
+            {[
+              { landmark: 'From Downtown Orlando', directions: 'About 25 minutes west via West Colonial Drive (SR-50) or the Western Expressway (SR-429). We reach Horizon West and Hamlin quickly via the 429 interchange.' },
+              { landmark: 'From Winter Garden Village', directions: 'This major retail center at Daniels Road and SR-535 is a central landmark. We serve all residential communities in the surrounding area.' },
+              { landmark: 'From the West Orange Trail', directions: 'The trail\'s main trailhead in downtown Winter Garden connects to Ocoee and Apopka. Many of our clients discover us while enjoying this popular cycling path.' },
+              { landmark: 'From Garden Theatre', directions: 'Historic downtown Winter Garden\'s iconic theater anchors Plant Street. We serve all downtown businesses and the surrounding historic neighborhoods.' }
+            ].map((item) => (
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-route text-accent mt-1"></i>
+                <div>
+                  <h3 class="font-heading font-bold text-primary text-sm uppercase tracking-wider">{item.landmark}</h3>
+                  <p class="text-concrete-light text-sm mt-1">{item.directions}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/images/team-work.webp" srcset="/images/team-work-640w.webp 640w, /images/team-work.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Concrete coating team serving Winter Garden" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28 topo-bg relative">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Winter Garden Climate Challenges</h2>
+        <p class="text-white/60 max-w-2xl mx-auto">Rapid development and Central Florida weather create unique challenges for Winter Garden's concrete surfaces.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { icon: 'fa-solid fa-house-crack', title: 'New Construction Settling', desc: 'Freshly graded land in Horizon West and Hamlin settles over time, causing hairline cracks. Flexible polyaspartic coatings bridge and accommodate minor movement.' },
+          { icon: 'fa-solid fa-sun', title: 'West-Facing UV Exposure', desc: 'Many Winter Garden homes face west, receiving intense afternoon sun. UV-stable coatings prevent yellowing, fading, and surface degradation on exposed slabs.' },
+          { icon: 'fa-solid fa-cloud-showers-heavy', title: 'Afternoon Thunderstorms', desc: 'Summer storms roll in from the Gulf nearly every afternoon, dumping heavy rain. Seamless coatings prevent water penetration and standing water damage.' },
+          { icon: 'fa-solid fa-hill-rockslide', title: 'Sandy Soil Conditions', desc: 'Central Florida\'s sandy substrate drains quickly but provides less stable support for slabs. Proper surface prep and flexible coatings ensure long-term adhesion.' }
+        ].map((item) => (
+          <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/10">
+            <i class={`${item.icon} text-accent text-2xl mb-4 block`}></i>
+            <h3 class="font-heading font-bold text-white uppercase tracking-wider text-sm mb-2">{item.title}</h3>
+            <p class="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Our Services in Winter Garden</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { icon: 'fa-solid fa-layer-group', title: 'Epoxy Floor Coating', link: '/services/epoxy-floor-coating' },
+          { icon: 'fa-solid fa-bolt', title: 'Polyaspartic Coating', link: '/services/polyaspartic-coating' },
+          { icon: 'fa-solid fa-palette', title: 'Decorative Concrete', link: '/services/decorative-concrete' },
+          { icon: 'fa-solid fa-warehouse', title: 'Garage Floor Coating', link: '/services/garage-floor-coating' },
+          { icon: 'fa-solid fa-water', title: 'Pool Deck Resurfacing', link: '/services/pool-deck-resurfacing' },
+          { icon: 'fa-solid fa-road', title: 'Driveway Coating', link: '/services/driveway-coating' },
+          { icon: 'fa-solid fa-building', title: 'Commercial Flooring', link: '/services/commercial-flooring' },
+          { icon: 'fa-solid fa-industry', title: 'Industrial Flooring', link: '/services/industrial-flooring' },
+          { icon: 'fa-solid fa-screwdriver-wrench', title: 'Concrete Repair', link: '/services/concrete-repair' },
+        ].map((service) => (
+          <a href={service.link} class="flex items-center gap-4 bg-surface p-5 border-b-4 border-transparent hover:border-accent transition-all group">
+            <div class="w-10 h-10 bg-primary group-hover:bg-accent flex items-center justify-center skew-x-[-4deg] transition-colors flex-shrink-0">
+              <i class={`${service.icon} text-accent group-hover:text-primary text-sm skew-x-[4deg] transition-colors`}></i>
+            </div>
+            <span class="font-heading font-bold text-primary uppercase tracking-wider text-sm">{service.title}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Concrete Coating FAQs — Winter Garden</h2>
+      </div>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <details class="group bg-surface p-6">
+            <summary class="flex items-center justify-between cursor-pointer list-none">
+              <h3 class="font-heading font-bold text-primary text-sm uppercase tracking-wider pr-4">{faq.q}</h3>
+              <i class="fa-solid fa-chevron-down text-accent text-xs group-open:rotate-180 transition-transform flex-shrink-0"></i>
+            </summary>
+            <p class="text-concrete-light text-sm leading-relaxed mt-4">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  })} />
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">Transform Your Winter Garden Floor</h2>
+      <p class="text-xl text-concrete-light max-w-2xl mx-auto mb-10">Get a free estimate for your Winter Garden home or business. Same-day quotes available.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-block bg-accent hover:bg-accent-dark text-primary px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-arrow-right"></i>Get Your Free Quote</span>
+        </a>
+        <a href="tel:4075550123" class="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i>(407) 555-0123</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

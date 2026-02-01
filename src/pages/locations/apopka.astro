@@ -1,0 +1,208 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+
+const faqs = [
+  { q: "How much does concrete coating cost in Apopka?", a: "Most residential projects in Apopka range from $5–$12 per square foot. Properties with larger lots — common in Apopka's more rural areas — may have bigger garages and driveways, but per-square-foot pricing stays consistent. Free on-site estimates." },
+  { q: "Do you serve Wekiva, Rock Springs, and Zellwood?", a: "Yes — we cover all of Apopka and northwest Orange County including Wekiva, Rock Springs, Zellwood, and the US-441 corridor. Free consultations throughout the area." },
+  { q: "Can you coat concrete in Apopka's rural and agricultural areas?", a: "Absolutely. We serve residential, commercial, and agricultural properties throughout Apopka. Barn floors, equipment garages, and storage facility coatings are common projects in the area's more rural communities." },
+  { q: "What challenges does Apopka's soil create for concrete?", a: "Apopka's sandy soil and proximity to springs can create drainage and moisture issues. We test every slab for moisture vapor transmission and apply vapor barriers when needed to prevent coating failures." },
+  { q: "Do you offer free estimates in Apopka?", a: "Yes — free on-site consultations for all Apopka properties. We test your concrete, bring color samples, and provide a detailed written quote with no obligations or hidden fees." }
+];
+---
+
+<Layout title="Concrete Coating Apopka FL — Epoxy & Polyaspartic Floors" description="Professional concrete coating in Apopka FL. Serving Wekiva, Rock Springs, Zellwood & all northwest Orange County. Epoxy garage floors, driveways & commercial coatings. Free estimates — (407) 555-0123." preloadImage="/images/commercial-floor.webp">
+  <Hero
+    title="Concrete Coating in Apopka, FL"
+    subtitle="Durable epoxy and polyaspartic coatings for Apopka homes, businesses, and agricultural properties"
+    backgroundImage="/images/commercial-floor.webp"
+    compact
+  />
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Concrete Coating Services in Apopka</h2>
+          <p class="text-lg text-concrete-light mb-6">
+            Apopka sits at the northwest gateway to Orlando, blending suburban growth with Florida's natural springs and agricultural heritage. From new developments along Kelly Park Road to established communities near Wekiva Springs State Park, we provide concrete coatings engineered for Apopka's unique mix of terrain and climate conditions.
+          </p>
+          <p class="text-concrete-light mb-6">
+            Apopka's sandy soil and proximity to natural springs mean groundwater and drainage patterns can vary significantly from one property to the next. Our team tests every slab for moisture and assesses drainage conditions before recommending the right coating system — a critical step that prevents the premature failures common with one-size-fits-all approaches.
+          </p>
+          <p class="text-concrete-light mb-8">
+            We serve Apopka homeowners with garage floors, pool decks, driveways, and patios. Commercial and agricultural property owners along US-441 and the Apopka-Vineland corridor trust us for warehouse floors, shop floors, and equipment storage areas that need to stand up to heavy use.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/contact" class="inline-block bg-accent hover:bg-accent-dark text-primary px-8 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+              <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-arrow-right"></i>Free Apopka Estimate</span>
+            </a>
+            <a href="tel:4075550123" class="inline-block bg-primary hover:bg-primary-light text-white px-8 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+              <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i>(407) 555-0123</span>
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/images/commercial-floor.webp" srcset="/images/commercial-floor-640w.webp 640w, /images/commercial-floor.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Commercial floor coating in Apopka FL" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Apopka Neighborhoods We Serve</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { area: 'Wekiva / Rock Springs', desc: 'Communities near Wekiva Springs State Park and Kelly Park. Homes surrounded by natural springs often need moisture mitigation for lasting coatings.' },
+          { area: 'Zellwood', desc: 'Agricultural community north of Apopka. Residential, commercial, and agricultural facility coatings for the area\'s working properties.' },
+          { area: 'Downtown Apopka', desc: 'Small businesses and residences along Main Street and the US-441 corridor. Commercial and residential coatings for the city center.' },
+          { area: 'Apopka-Vineland Road Corridor', desc: 'Growing residential and commercial area connecting Apopka to southwest Orange County. New construction coatings and commercial projects.' },
+          { area: 'Errol Estate / Wekiva Park', desc: 'Established residential communities with larger lots. Garage floors, pool decks, and screened lanai coatings are popular here.' },
+          { area: 'Plymouth / Sorrento', desc: 'Rural northwest Orange County communities. We travel to properties throughout this area for residential and agricultural coatings.' }
+        ].map((item) => (
+          <div class="bg-surface p-6 border-b-4 border-transparent hover:border-accent transition-all">
+            <h3 class="font-heading font-bold text-primary uppercase tracking-wider mb-2">{item.area}</h3>
+            <p class="text-concrete-light text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Getting to Apopka</h2>
+          <p class="text-concrete-light mb-6">Apopka is located northwest of Orlando, easily accessible via US-441 and the FL-429 expressway.</p>
+          <div class="space-y-4">
+            {[
+              { landmark: 'From Downtown Orlando', directions: 'Approximately 20 minutes northwest via US-441 or I-4 to Maitland Blvd, then west to Apopka.' },
+              { landmark: 'From Wekiva Springs State Park', directions: 'We serve all residential properties in the Wekiva area, including communities along Wekiva Springs Road and Rock Springs Road.' },
+              { landmark: 'From Apopka City Hall', directions: 'Central Apopka and the US-441/Main Street corridor are the hub of our local coverage area.' },
+              { landmark: 'From FL-429 / Western Beltway', directions: 'Quick access to properties in west Apopka and the Errol Estate/Wekiva Park neighborhoods via the FL-429 expressway.' }
+            ].map((item) => (
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-route text-accent mt-1"></i>
+                <div>
+                  <h3 class="font-heading font-bold text-primary text-sm uppercase tracking-wider">{item.landmark}</h3>
+                  <p class="text-concrete-light text-sm mt-1">{item.directions}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="relative">
+          <img src="/images/team-work.webp" srcset="/images/team-work-640w.webp 640w, /images/team-work.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Concrete coating team serving Apopka" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28 topo-bg relative">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Apopka Climate Challenges</h2>
+        <p class="text-white/60 max-w-2xl mx-auto">Apopka's natural springs, sandy soil, and Florida weather create specific challenges for concrete surfaces.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { icon: 'fa-solid fa-water', title: 'Spring-Fed Moisture', desc: 'Apopka\'s natural springs raise groundwater levels, pushing moisture through concrete slabs. Vapor barriers are critical for lasting coatings.' },
+          { icon: 'fa-solid fa-mound', title: 'Sandy Soil Drainage', desc: 'Sandy Florida soil affects how water drains around foundations. Proper assessment ensures coatings aren\'t undermined by shifting moisture patterns.' },
+          { icon: 'fa-solid fa-sun', title: 'Year-Round UV', desc: 'Strong Florida sun degrades unprotected coatings. Our UV-stable polyaspartic topcoats maintain color and gloss for years.' },
+          { icon: 'fa-solid fa-cloud-rain', title: 'Heavy Summer Rain', desc: 'Apopka\'s summer thunderstorms bring intense rainfall. Seamless coatings prevent water infiltration and protect against pooling damage.' }
+        ].map((item) => (
+          <div class="bg-white/10 backdrop-blur-sm p-6 border border-white/10">
+            <i class={`${item.icon} text-accent text-2xl mb-4 block`}></i>
+            <h3 class="font-heading font-bold text-white uppercase tracking-wider text-sm mb-2">{item.title}</h3>
+            <p class="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Our Services in Apopka</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { icon: 'fa-solid fa-layer-group', title: 'Epoxy Floor Coating', link: '/services/epoxy-floor-coating' },
+          { icon: 'fa-solid fa-bolt', title: 'Polyaspartic Coating', link: '/services/polyaspartic-coating' },
+          { icon: 'fa-solid fa-palette', title: 'Decorative Concrete', link: '/services/decorative-concrete' },
+          { icon: 'fa-solid fa-warehouse', title: 'Garage Floor Coating', link: '/services/garage-floor-coating' },
+          { icon: 'fa-solid fa-water', title: 'Pool Deck Resurfacing', link: '/services/pool-deck-resurfacing' },
+          { icon: 'fa-solid fa-road', title: 'Driveway Coating', link: '/services/driveway-coating' },
+          { icon: 'fa-solid fa-building', title: 'Commercial Flooring', link: '/services/commercial-flooring' },
+          { icon: 'fa-solid fa-industry', title: 'Industrial Flooring', link: '/services/industrial-flooring' },
+          { icon: 'fa-solid fa-screwdriver-wrench', title: 'Concrete Repair', link: '/services/concrete-repair' },
+        ].map((service) => (
+          <a href={service.link} class="flex items-center gap-4 bg-surface p-5 border-b-4 border-transparent hover:border-accent transition-all group">
+            <div class="w-10 h-10 bg-primary group-hover:bg-accent flex items-center justify-center skew-x-[-4deg] transition-colors flex-shrink-0">
+              <i class={`${service.icon} text-accent group-hover:text-primary text-sm skew-x-[4deg] transition-colors`}></i>
+            </div>
+            <span class="font-heading font-bold text-primary uppercase tracking-wider text-sm">{service.title}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Concrete Coating FAQs — Apopka</h2>
+      </div>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <details class="group bg-surface p-6">
+            <summary class="flex items-center justify-between cursor-pointer list-none">
+              <h3 class="font-heading font-bold text-primary text-sm uppercase tracking-wider pr-4">{faq.q}</h3>
+              <i class="fa-solid fa-chevron-down text-accent text-xs group-open:rotate-180 transition-transform flex-shrink-0"></i>
+            </summary>
+            <p class="text-concrete-light text-sm leading-relaxed mt-4">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  })} />
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">Transform Your Apopka Floor</h2>
+      <p class="text-xl text-concrete-light max-w-2xl mx-auto mb-10">Get a free estimate for your Apopka home, business, or agricultural property. We serve all of northwest Orange County.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-block bg-accent hover:bg-accent-dark text-primary px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-arrow-right"></i>Get Your Free Quote</span>
+        </a>
+        <a href="tel:4075550123" class="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i>(407) 555-0123</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
