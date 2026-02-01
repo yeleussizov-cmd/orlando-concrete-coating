@@ -1,8 +1,77 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1e40af;
-  --color-primary-dark: #1e3a8a;
-  --color-accent: #f97316;
-  --color-accent-dark: #ea580c;
+  --color-primary: #1a1a2e;
+  --color-primary-light: #2d2d44;
+  --color-accent: #d4a437;
+  --color-accent-dark: #b8892e;
+  --color-accent-light: #f0d68a;
+  --color-concrete: #3a3a3a;
+  --color-concrete-light: #5c5c5c;
+  --color-surface: #f5f2ed;
+  --color-surface-dark: #e8e3db;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Topographic background pattern */
+.topo-bg {
+  background-color: var(--color-primary);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff08' stroke-width='1'%3E%3Cellipse cx='300' cy='300' rx='280' ry='200'/%3E%3Cellipse cx='300' cy='300' rx='240' ry='170'/%3E%3Cellipse cx='300' cy='300' rx='200' ry='140'/%3E%3Cellipse cx='300' cy='300' rx='160' ry='110'/%3E%3Cellipse cx='300' cy='300' rx='120' ry='80'/%3E%3Cellipse cx='300' cy='300' rx='80' ry='50'/%3E%3Cellipse cx='150' cy='150' rx='130' ry='90'/%3E%3Cellipse cx='150' cy='150' rx='90' ry='60'/%3E%3Cellipse cx='150' cy='150' rx='50' ry='30'/%3E%3Cellipse cx='480' cy='450' rx='110' ry='80'/%3E%3Cellipse cx='480' cy='450' rx='70' ry='50'/%3E%3Cellipse cx='480' cy='450' rx='30' ry='20'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Concrete texture overlay */
+.concrete-texture {
+  position: relative;
+}
+.concrete-texture::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Diagonal stripe accent */
+.stripe-accent {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    var(--color-accent) 8px,
+    var(--color-accent) 10px
+  );
+}
+
+/* Animations */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }

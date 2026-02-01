@@ -8,7 +8,8 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Professional concrete coating services in Orlando, FL. Epoxy floors, polyaspartic coatings, and decorative concrete solutions." } = Astro.props;
+const { title, description = "Orlando's premier concrete coating contractor. Epoxy garage floors, polyaspartic coatings, pool deck resurfacing & commercial flooring. Free estimates. Call (407) 555-0123." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, 'https://orlandoconcretecoating.com');
 ---
 
 <!doctype html>
@@ -17,10 +18,50 @@ const { title, description = "Professional concrete coating services in Orlando,
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={`${title} | Orlando Concrete Coating`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>{title} | Orlando Concrete Coating</title>
+
+    <!-- Schema.org Local Business -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Orlando Concrete Coating",
+      "telephone": "(407) 555-0123",
+      "email": "info@orlandoconcretecoating.com",
+      "url": "https://orlandoconcretecoating.com",
+      "areaServed": {
+        "@type": "City",
+        "name": "Orlando",
+        "addressRegion": "FL"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Orlando",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
+      "priceRange": "$$"
+    })} />
   </head>
-  <body class="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+  <body class="min-h-screen flex flex-col bg-surface text-concrete font-body">
     <Header />
     <main class="flex-grow">
       <slot />

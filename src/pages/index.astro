@@ -4,152 +4,275 @@ import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 ---
 
-<Layout title="Home">
+<Layout title="Epoxy & Concrete Floor Coatings in Orlando, FL" description="Orlando's top-rated concrete coating company. Premium epoxy garage floors, polyaspartic coatings, pool deck resurfacing & commercial flooring. Free estimates in Central Florida. Call (407) 555-0123.">
   <Hero
-    title="Transform Your Concrete Floors"
-    subtitle="Professional epoxy and polyaspartic coating services in Orlando. Durable, beautiful floors that last for years."
+    title="Premium Concrete Coatings for Orlando Homes & Businesses"
+    subtitle="Durable epoxy, polyaspartic, and decorative floor coatings backed by a 15-year warranty. Serving Central Florida since 2014."
+    backgroundImage="/images/hero-garage.png"
   />
 
+  <!-- Trust Badges -->
+  <section class="bg-white border-b border-surface-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-solid fa-shield-halved text-accent text-2xl"></i>
+          <span class="font-heading text-sm uppercase tracking-wider text-primary font-bold">Licensed & Insured</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-solid fa-medal text-accent text-2xl"></i>
+          <span class="font-heading text-sm uppercase tracking-wider text-primary font-bold">15-Year Warranty</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-solid fa-star text-accent text-2xl"></i>
+          <span class="font-heading text-sm uppercase tracking-wider text-primary font-bold">5-Star Rated</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fa-solid fa-handshake text-accent text-2xl"></i>
+          <span class="font-heading text-sm uppercase tracking-wider text-primary font-bold">Free Estimates</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services Overview -->
-  <section class="py-16 md:py-24">
+  <section class="py-20 md:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          We specialize in high-quality concrete coating solutions for residential and commercial properties.
+      <div class="max-w-2xl mb-14">
+        <div class="w-12 h-1 bg-accent mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Our Concrete Coating Services</h2>
+        <p class="text-lg text-concrete-light">
+          From residential garage floors to large-scale commercial facilities, we deliver coatings engineered for Florida's demanding climate.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceCard
           title="Epoxy Floor Coatings"
-          description="Transform your garage or commercial space with our premium epoxy coatings. Chemical resistant, easy to clean, and built to last."
-          icon="🏠"
+          description="High-performance, chemical-resistant epoxy systems for garages, basements, and commercial spaces. Multiple colors, metallic finishes, and flake options available."
+          icon="fa-solid fa-layer-group"
           link="/services"
         />
         <ServiceCard
           title="Polyaspartic Coatings"
-          description="Fast-curing, UV-stable coatings perfect for Florida's climate. Same-day return to service available."
-          icon="⚡"
+          description="Fast-curing, UV-stable coatings ideal for Florida's sun. Same-day return to service with superior abrasion resistance. Perfect for outdoor applications."
+          icon="fa-solid fa-bolt"
           link="/services"
         />
         <ServiceCard
           title="Decorative Concrete"
-          description="Stamped, stained, and polished concrete options to enhance your patios, driveways, and interior floors."
-          icon="✨"
+          description="Stained, stamped, and polished concrete solutions that turn ordinary floors into design statements. Ideal for patios, entryways, and retail spaces."
+          icon="fa-solid fa-palette"
           link="/services"
         />
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="py-16 md:py-24 bg-gray-100">
+  <!-- Before/After + Why Choose Us -->
+  <section class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <!-- Before/After Image -->
+        <div class="relative">
+          <img
+            src="/images/before-after.png"
+            alt="Before and after garage floor epoxy coating transformation in Orlando"
+            class="w-full shadow-2xl"
+            loading="lazy"
+          />
+          <div class="absolute top-4 left-4 bg-primary/90 text-white px-4 py-2 font-heading text-xs uppercase tracking-wider">
+            <i class="fa-solid fa-arrows-left-right mr-2"></i>Before & After
+          </div>
+        </div>
+
+        <!-- Why Choose Us -->
         <div>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Why Choose Orlando Concrete Coating?
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
+            Why Orlando Trusts Us With Their Floors
           </h2>
-          <div class="space-y-4">
-            <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
+          <p class="text-concrete-light mb-8 text-lg">
+            We combine commercial-grade materials with meticulous surface preparation to deliver floors that look stunning and last for decades.
+          </p>
+
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-diamond text-accent text-sm"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900">Licensed & Insured</h3>
-                <p class="text-gray-600">Fully licensed and insured for your peace of mind.</p>
+                <h3 class="font-heading font-bold text-primary uppercase text-sm tracking-wider">Diamond Grinding Prep</h3>
+                <p class="text-concrete-light text-sm mt-1">We never skip proper surface prep. Industrial diamond grinding ensures maximum adhesion.</p>
               </div>
             </div>
-            <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-flask text-accent text-sm"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900">Premium Materials</h3>
-                <p class="text-gray-600">We use only top-quality, commercial-grade coatings.</p>
+                <h3 class="font-heading font-bold text-primary uppercase text-sm tracking-wider">Commercial-Grade Materials</h3>
+                <p class="text-concrete-light text-sm mt-1">100% solids epoxy and polyaspartic systems &mdash; not watered-down box store products.</p>
               </div>
             </div>
-            <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-sun text-accent text-sm"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900">Warranty Included</h3>
-                <p class="text-gray-600">All our work is backed by a comprehensive warranty.</p>
+                <h3 class="font-heading font-bold text-primary uppercase text-sm tracking-wider">Built for Florida</h3>
+                <p class="text-concrete-light text-sm mt-1">UV-stable, moisture-resistant formulas designed to handle Orlando's heat and humidity.</p>
               </div>
             </div>
-            <div class="flex items-start space-x-4">
-              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-certificate text-accent text-sm"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900">Local Experts</h3>
-                <p class="text-gray-600">Orlando-based team with extensive Florida experience.</p>
+                <h3 class="font-heading font-bold text-primary uppercase text-sm tracking-wider">15-Year Warranty</h3>
+                <p class="text-concrete-light text-sm mt-1">We stand behind every installation with one of the strongest warranties in the industry.</p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="bg-white rounded-xl shadow-xl p-8">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
-          <p class="text-gray-600 mb-6">
-            Contact us today for a free, no-obligation quote. We'll assess your space and provide recommendations tailored to your needs.
-          </p>
-          <a
-            href="/contact"
-            class="inline-block w-full text-center bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-          >
-            Get Your Free Quote
-          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Service Area -->
-  <section class="py-16 md:py-24">
+  <!-- Gallery Strip -->
+  <section class="py-20 md:py-28 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Our Recent Work</h2>
+        <p class="text-lg text-concrete-light max-w-2xl mx-auto">
+          See the quality difference a professional concrete coating makes. These are real projects completed for Orlando homeowners and businesses.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="relative group overflow-hidden aspect-[4/3]">
+          <img src="/images/hero-garage.png" alt="Metallic epoxy garage floor coating in Orlando FL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <span class="text-white font-heading text-sm uppercase tracking-wider">Metallic Epoxy Garage</span>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden aspect-[4/3]">
+          <img src="/images/commercial-floor.png" alt="Commercial warehouse concrete coating Orlando" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <span class="text-white font-heading text-sm uppercase tracking-wider">Commercial Warehouse</span>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden aspect-[4/3]">
+          <img src="/images/pool-deck.png" alt="Pool deck concrete coating in Orlando Florida" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <span class="text-white font-heading text-sm uppercase tracking-wider">Pool Deck Coating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-20 md:py-28 topo-bg relative">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Our Proven 4-Step Process</h2>
+        <p class="text-lg text-white/60 max-w-2xl mx-auto">
+          Every project follows our rigorous process to ensure a flawless, long-lasting finish.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent skew-x-[-4deg] flex items-center justify-center mx-auto mb-5">
+            <i class="fa-solid fa-clipboard-check text-primary text-xl skew-x-[4deg]"></i>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-white uppercase tracking-wider mb-2">1. Consultation</h3>
+          <p class="text-white/60 text-sm">Free on-site assessment, color selection, and detailed written estimate.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent skew-x-[-4deg] flex items-center justify-center mx-auto mb-5">
+            <i class="fa-solid fa-gears text-primary text-xl skew-x-[4deg]"></i>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-white uppercase tracking-wider mb-2">2. Preparation</h3>
+          <p class="text-white/60 text-sm">Diamond grinding, crack repair, and moisture testing for optimal adhesion.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent skew-x-[-4deg] flex items-center justify-center mx-auto mb-5">
+            <i class="fa-solid fa-paint-roller text-primary text-xl skew-x-[4deg]"></i>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-white uppercase tracking-wider mb-2">3. Application</h3>
+          <p class="text-white/60 text-sm">Multi-coat professional application with broadcast flake or metallic finish.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-accent skew-x-[-4deg] flex items-center justify-center mx-auto mb-5">
+            <i class="fa-solid fa-circle-check text-primary text-xl skew-x-[4deg]"></i>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-white uppercase tracking-wider mb-2">4. Inspection</h3>
+          <p class="text-white/60 text-sm">Final quality check, walkthrough, and care instructions for your new floor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Teaser -->
+  <section class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Proudly Serving Orlando & Central Florida
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
+        Serving Orlando & All of Central Florida
       </h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-        From downtown Orlando to the surrounding communities, we bring professional concrete coating services to homes and businesses throughout Central Florida.
+      <p class="text-lg text-concrete-light max-w-3xl mx-auto mb-8">
+        From Winter Park to Kissimmee, Lake Nona to Windermere &mdash; our team delivers professional concrete coating services within 50 miles of downtown Orlando.
       </p>
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        {['Orlando', 'Winter Park', 'Kissimmee', 'Lake Nona', 'Dr. Phillips', 'Windermere', 'Ocoee', 'Sanford'].map((city) => (
+          <span class="bg-surface px-4 py-2 font-heading text-xs uppercase tracking-wider text-concrete border border-surface-dark">
+            <i class="fa-solid fa-location-dot text-accent mr-1"></i>{city}
+          </span>
+        ))}
+      </div>
       <a
         href="/locations"
-        class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors"
+        class="inline-flex items-center gap-2 text-accent font-heading font-bold text-sm uppercase tracking-wider hover:gap-3 transition-all"
       >
-        View Our Service Areas
-        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
+        View All Service Areas <i class="fa-solid fa-arrow-right text-xs"></i>
       </a>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="bg-primary py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-        Transform Your Space Today
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url(/images/texture-closeup.png)">
+      <div class="absolute inset-0 bg-primary/90"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
+        Ready to Transform Your Floor?
       </h2>
-      <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
-        Don't settle for cracked, stained concrete. Get a beautiful, durable floor that will last for years.
+      <p class="text-xl text-white/60 max-w-2xl mx-auto mb-10">
+        Get a free, no-obligation estimate from Orlando's most trusted concrete coating professionals.
       </p>
-      <a
-        href="/contact"
-        class="inline-block bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg"
-      >
-        Schedule Your Free Consultation
-      </a>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="/contact"
+          class="inline-block bg-accent hover:bg-accent-dark text-primary px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]"
+        >
+          <span class="skew-x-[4deg] inline-flex items-center gap-2">
+            <i class="fa-solid fa-arrow-right"></i>Schedule Free Consultation
+          </span>
+        </a>
+        <a
+          href="tel:4075550123"
+          class="inline-block border-2 border-accent text-accent hover:bg-accent hover:text-primary px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]"
+        >
+          <span class="skew-x-[4deg] inline-flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i>Call (407) 555-0123
+          </span>
+        </a>
+      </div>
     </div>
   </section>
 </Layout>

@@ -10,54 +10,83 @@ const navItems = [
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="bg-white shadow-md sticky top-0 z-50">
+<!-- Top bar -->
+<div class="bg-primary text-white/80 text-sm hidden md:block">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-10">
+    <div class="flex items-center gap-6">
+      <a href="tel:4075550123" class="flex items-center gap-2 hover:text-accent transition-colors">
+        <i class="fa-solid fa-phone text-accent text-xs"></i>
+        <span>(407) 555-0123</span>
+      </a>
+      <a href="mailto:info@orlandoconcretecoating.com" class="flex items-center gap-2 hover:text-accent transition-colors">
+        <i class="fa-solid fa-envelope text-accent text-xs"></i>
+        <span>info@orlandoconcretecoating.com</span>
+      </a>
+    </div>
+    <div class="flex items-center gap-2">
+      <i class="fa-solid fa-clock text-accent text-xs"></i>
+      <span>Mon-Fri 8am-6pm | Sat 9am-2pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main nav -->
+<header class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-accent">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <a href="/" class="flex items-center space-x-2">
-        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-          <span class="text-white font-bold text-lg">OC</span>
+    <div class="flex justify-between items-center h-18">
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 bg-primary flex items-center justify-center skew-x-[-4deg]">
+          <i class="fa-solid fa-trowel-bricks text-accent text-lg skew-x-[4deg]"></i>
         </div>
-        <span class="text-xl font-bold text-gray-900 hidden sm:block">Orlando Concrete Coating</span>
+        <div class="leading-tight">
+          <span class="block text-lg font-heading font-bold text-primary tracking-wide uppercase">Orlando</span>
+          <span class="block text-xs font-heading text-concrete-light tracking-[0.15em] uppercase">Concrete Coating</span>
+        </div>
       </a>
 
-      <div class="hidden md:flex items-center space-x-8">
+      <div class="hidden lg:flex items-center gap-1">
         {navItems.map((item) => (
           <a
             href={item.href}
             class:list={[
-              'text-sm font-medium transition-colors hover:text-primary',
-              currentPath === item.href ? 'text-primary' : 'text-gray-600'
+              'px-4 py-2 text-sm font-heading font-medium uppercase tracking-wider transition-colors relative',
+              currentPath === item.href
+                ? 'text-accent'
+                : 'text-concrete hover:text-accent'
             ]}
           >
             {item.label}
+            {currentPath === item.href && (
+              <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-accent"></span>
+            )}
           </a>
         ))}
         <a
           href="/contact"
-          class="bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          class="ml-4 bg-accent hover:bg-accent-dark text-primary px-6 py-2.5 font-heading font-bold text-sm uppercase tracking-wider transition-colors skew-x-[-4deg] inline-block"
         >
-          Get a Quote
+          <span class="skew-x-[4deg] inline-block">
+            <i class="fa-solid fa-hammer mr-2"></i>Free Quote
+          </span>
         </a>
       </div>
 
       <button
         id="mobile-menu-btn"
-        class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+        class="lg:hidden p-2 text-concrete hover:text-accent transition-colors"
         aria-label="Toggle menu"
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+        <i class="fa-solid fa-bars text-xl"></i>
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden pb-4">
+    <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-surface-dark">
       {navItems.map((item) => (
         <a
           href={item.href}
           class:list={[
-            'block py-2 text-sm font-medium transition-colors hover:text-primary',
-            currentPath === item.href ? 'text-primary' : 'text-gray-600'
+            'block py-3 text-sm font-heading font-medium uppercase tracking-wider transition-colors border-b border-surface-dark',
+            currentPath === item.href ? 'text-accent' : 'text-concrete hover:text-accent'
           ]}
         >
           {item.label}
@@ -65,10 +94,18 @@ const currentPath = Astro.url.pathname;
       ))}
       <a
         href="/contact"
-        class="block mt-2 bg-accent hover:bg-accent-dark text-white px-4 py-2 rounded-lg text-sm font-medium text-center transition-colors"
+        class="block mt-4 bg-accent hover:bg-accent-dark text-primary px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider text-center transition-colors"
       >
-        Get a Quote
+        <i class="fa-solid fa-hammer mr-2"></i>Get Free Quote
       </a>
+      <div class="mt-4 pt-4 border-t border-surface-dark flex flex-col gap-2 text-sm text-concrete-light">
+        <a href="tel:4075550123" class="flex items-center gap-2 hover:text-accent">
+          <i class="fa-solid fa-phone text-accent text-xs"></i>(407) 555-0123
+        </a>
+        <a href="mailto:info@orlandoconcretecoating.com" class="flex items-center gap-2 hover:text-accent">
+          <i class="fa-solid fa-envelope text-accent text-xs"></i>info@orlandoconcretecoating.com
+        </a>
+      </div>
     </div>
   </nav>
 </header>

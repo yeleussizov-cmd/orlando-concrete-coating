@@ -4,94 +4,87 @@ import Hero from '../components/Hero.astro';
 import ContactForm from '../components/ContactForm.astro';
 ---
 
-<Layout title="Contact" description="Contact Orlando Concrete Coating for a free quote. Call us or fill out our form for professional concrete coating services in Orlando, FL.">
+<Layout title="Contact Us - Free Estimate" description="Get a free concrete coating estimate in Orlando, FL. Call (407) 555-0123 or fill out our form. Epoxy floors, polyaspartic coatings & more. Response within 24 hours.">
   <Hero
-    title="Contact Us"
-    subtitle="Get a free quote for your concrete coating project"
+    title="Get Your Free Estimate"
+    subtitle="Contact us today for a no-obligation quote on your concrete coating project"
+    compact
     ctaText=""
   />
 
-  <section class="py-16 md:py-24">
+  <section class="py-20 md:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <!-- Contact Information -->
         <div class="lg:col-span-1">
-          <h2 class="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
-          <p class="text-gray-600 mb-8">
-            Have questions about our services? Ready to get started on your project?
-            Reach out to us and we'll get back to you promptly.
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-2xl font-heading font-bold text-primary mb-4 uppercase tracking-wider">Get In Touch</h2>
+          <p class="text-concrete-light mb-8">
+            Have questions or ready to start your project? Reach out and we'll respond promptly.
           </p>
 
           <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 bg-primary flex items-center justify-center flex-shrink-0 skew-x-[-4deg]">
+                <i class="fa-solid fa-phone text-accent skew-x-[4deg]"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900">Phone</h3>
-                <p class="text-gray-600">(407) 555-0123</p>
-                <p class="text-sm text-gray-500">Mon-Fri: 8am - 6pm</p>
+                <h3 class="font-heading font-bold text-primary uppercase text-xs tracking-wider">Phone</h3>
+                <a href="tel:4075550123" class="text-concrete-light hover:text-accent transition-colors">(407) 555-0123</a>
+                <p class="text-xs text-concrete-light/70 mt-1">Mon-Fri: 8am - 6pm | Sat: 9am - 2pm</p>
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
-              <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 bg-primary flex items-center justify-center flex-shrink-0 skew-x-[-4deg]">
+                <i class="fa-solid fa-envelope text-accent skew-x-[4deg]"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900">Email</h3>
-                <p class="text-gray-600">info@orlandoconcretecoating.com</p>
-                <p class="text-sm text-gray-500">We respond within 24 hours</p>
+                <h3 class="font-heading font-bold text-primary uppercase text-xs tracking-wider">Email</h3>
+                <a href="mailto:info@orlandoconcretecoating.com" class="text-concrete-light hover:text-accent transition-colors text-sm">info@orlandoconcretecoating.com</a>
+                <p class="text-xs text-concrete-light/70 mt-1">We respond within 24 hours</p>
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
-              <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 bg-primary flex items-center justify-center flex-shrink-0 skew-x-[-4deg]">
+                <i class="fa-solid fa-location-dot text-accent skew-x-[4deg]"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900">Service Area</h3>
-                <p class="text-gray-600">Orlando & Central Florida</p>
-                <p class="text-sm text-gray-500">Within 50 miles of downtown Orlando</p>
+                <h3 class="font-heading font-bold text-primary uppercase text-xs tracking-wider">Service Area</h3>
+                <p class="text-concrete-light">Orlando &amp; Central Florida</p>
+                <p class="text-xs text-concrete-light/70 mt-1">Within 50 miles of downtown Orlando</p>
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
-              <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 bg-primary flex items-center justify-center flex-shrink-0 skew-x-[-4deg]">
+                <i class="fa-solid fa-clock text-accent skew-x-[4deg]"></i>
               </div>
               <div>
-                <h3 class="font-semibold text-gray-900">Business Hours</h3>
-                <p class="text-gray-600">Monday - Friday: 8am - 6pm</p>
-                <p class="text-gray-600">Saturday: 9am - 2pm</p>
-                <p class="text-gray-600">Sunday: Closed</p>
+                <h3 class="font-heading font-bold text-primary uppercase text-xs tracking-wider">Business Hours</h3>
+                <p class="text-concrete-light text-sm">Monday - Friday: 8am - 6pm</p>
+                <p class="text-concrete-light text-sm">Saturday: 9am - 2pm</p>
+                <p class="text-concrete-light/70 text-sm">Sunday: Closed</p>
               </div>
             </div>
           </div>
 
-          <div class="mt-8 p-6 bg-accent/10 rounded-xl">
-            <h3 class="font-semibold text-gray-900 mb-2">Free Estimates</h3>
-            <p class="text-sm text-gray-600">
-              We offer free on-site estimates for all projects. Our team will assess your space,
-              discuss your needs, and provide a detailed quote with no obligation.
+          <div class="mt-8 bg-accent/10 border-l-4 border-accent p-6">
+            <h3 class="font-heading font-bold text-primary uppercase text-xs tracking-wider mb-2">
+              <i class="fa-solid fa-handshake text-accent mr-2"></i>Free Estimates
+            </h3>
+            <p class="text-sm text-concrete-light">
+              We offer free on-site estimates for all projects. Our team will assess your space, discuss your needs, and provide a detailed quote with no obligation.
             </p>
           </div>
         </div>
 
         <!-- Contact Form -->
         <div class="lg:col-span-2">
-          <div class="bg-white rounded-xl shadow-lg p-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">Request a Free Quote</h2>
-            <p class="text-gray-600 mb-8">
+          <div class="bg-white shadow-xl p-8 md:p-10 border-b-4 border-accent">
+            <h2 class="text-2xl font-heading font-bold text-primary mb-2 uppercase tracking-wider">Request a Free Quote</h2>
+            <p class="text-concrete-light mb-8">
               Fill out the form below and we'll get back to you within 24 hours.
             </p>
             <ContactForm />
@@ -102,47 +95,27 @@ import ContactForm from '../components/ContactForm.astro';
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-16 md:py-24 bg-gray-50">
+  <section class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Quick answers to common questions about our services.
-        </p>
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Frequently Asked Questions</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="font-semibold text-gray-900 mb-2">How long does the coating process take?</h3>
-          <p class="text-gray-600">
-            Most residential garages can be completed in 1-2 days. Larger commercial projects may take longer.
-            We'll provide a timeline during your consultation.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="font-semibold text-gray-900 mb-2">When can I use my floor after coating?</h3>
-          <p class="text-gray-600">
-            With polyaspartic coatings, you can walk on the floor within hours. Epoxy typically requires
-            24-72 hours before light use and 7 days for full cure.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="font-semibold text-gray-900 mb-2">Do you offer warranties?</h3>
-          <p class="text-gray-600">
-            Yes! All our work comes with a comprehensive warranty. The specific terms depend on the
-            coating system and application. We'll explain all warranty details during your consultation.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-lg p-6 shadow-sm">
-          <h3 class="font-semibold text-gray-900 mb-2">What preparation is needed?</h3>
-          <p class="text-gray-600">
-            We handle all preparation including cleaning, crack repair, and diamond grinding.
-            Just clear the area of vehicles and stored items before we arrive.
-          </p>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {[
+          { q: 'How long does the coating process take?', a: 'Most residential garages can be completed in 1-2 days. Larger commercial projects may take longer. We provide a detailed timeline during your free consultation.' },
+          { q: 'When can I use my floor after coating?', a: 'Polyaspartic coatings allow foot traffic within hours. Epoxy requires 24-72 hours for light use and 7 days for full vehicular traffic.' },
+          { q: 'Do you offer warranties?', a: 'All projects include our 15-year warranty. Specific terms depend on the coating system. We explain all warranty details during your consultation.' },
+          { q: 'What preparation is needed before you arrive?', a: 'Simply clear the area of vehicles and stored items. We handle all surface preparation including cleaning, crack repair, and diamond grinding.' },
+          { q: 'How much does concrete coating cost?', a: 'Pricing varies based on square footage, surface condition, and coating system. Contact us for a free, no-obligation estimate tailored to your project.' },
+          { q: 'Can you coat outdoor concrete?', a: 'Our polyaspartic coatings are specifically designed for outdoor use — UV stable, slip-resistant, and built to handle Florida weather.' },
+        ].map((faq) => (
+          <div class="bg-surface p-6 border-l-4 border-accent">
+            <h3 class="font-heading font-bold text-primary uppercase text-sm tracking-wider mb-2">{faq.q}</h3>
+            <p class="text-concrete-light text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
