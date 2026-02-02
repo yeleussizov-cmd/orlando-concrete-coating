@@ -80,13 +80,13 @@ const currentPath = Astro.url.pathname;
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-surface-dark">
+    <div id="mobile-menu" class="hidden lg:hidden pb-6 pt-2 bg-white border-t border-surface-dark">
       {navItems.map((item) => (
         <a
           href={item.href}
           class:list={[
-            'block py-3 text-sm font-heading font-medium uppercase tracking-wider transition-colors border-b border-surface-dark',
-            currentPath === item.href ? 'text-accent' : 'text-concrete hover:text-accent'
+            'block py-3 px-2 font-heading font-medium uppercase tracking-wider transition-colors border-b border-surface-dark',
+            currentPath === item.href ? 'text-accent text-base' : 'text-concrete hover:text-accent text-base'
           ]}
         >
           {item.label}
@@ -94,16 +94,16 @@ const currentPath = Astro.url.pathname;
       ))}
       <a
         href="/contact"
-        class="block mt-4 bg-accent hover:bg-accent-dark text-primary px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider text-center transition-colors"
+        class="block mt-4 bg-accent hover:bg-accent-dark text-primary px-6 py-3 font-heading font-bold text-base uppercase tracking-wider text-center transition-colors"
       >
         <i class="fa-solid fa-hammer mr-2"></i>Get Free Quote
       </a>
-      <div class="mt-4 pt-4 border-t border-surface-dark flex flex-col gap-2 text-sm text-concrete-light">
+      <div class="mt-4 pt-4 border-t border-surface-dark flex flex-col gap-3 text-base text-concrete-light px-2">
         <a href="tel:4075550123" class="flex items-center gap-2 hover:text-accent">
-          <i class="fa-solid fa-phone text-accent text-xs"></i>(407) 555-0123
+          <i class="fa-solid fa-phone text-accent text-sm"></i>(407) 555-0123
         </a>
         <a href="mailto:info@orlandoconcretecoating.com" class="flex items-center gap-2 hover:text-accent">
-          <i class="fa-solid fa-envelope text-accent text-xs"></i>info@orlandoconcretecoating.com
+          <i class="fa-solid fa-envelope text-accent text-sm"></i>info@orlandoconcretecoating.com
         </a>
       </div>
     </div>

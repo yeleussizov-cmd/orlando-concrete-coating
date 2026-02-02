@@ -21,6 +21,8 @@
   body {
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
+    font-size: 1.0625rem; /* 17px base instead of 16px for better mobile readability */
+    line-height: 1.7;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
