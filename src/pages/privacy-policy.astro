@@ -1,0 +1,273 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Privacy Policy — Orlando Concrete Coatings" description="Privacy Policy for Orlando Concrete Coatings. Learn how we collect, use, and protect your personal information.">
+  <Hero
+    title="Privacy Policy"
+    subtitle="How we collect, use, and protect your personal information"
+    compact
+    ctaText=""
+  />
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white p-8 md:p-12 shadow-sm">
+        <p class="text-concrete-light text-sm mb-8"><strong class="text-primary">Effective Date:</strong> 1/15/26</p>
+
+        <p class="text-concrete-light leading-relaxed mb-10">
+          Orlando Concrete Coatings ("Company," "we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website, interact with our advertisements, or submit information through Meta (Facebook/Instagram) lead forms.
+        </p>
+
+        <!-- Section 1 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">1</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Information We Collect</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">We may collect the following information when you:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Submit a contact form on our website',
+              'Complete a Meta (Facebook or Instagram) lead form',
+              'Call, text, or email us',
+              'Interact with our ads or website'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p class="text-concrete-light leading-relaxed mb-4">Information collected may include:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Full name',
+              'Phone number',
+              'Email address',
+              'Property address',
+              'Project details',
+              'Any additional information you voluntarily provide'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p class="text-concrete-light leading-relaxed mb-4">We may also collect technical data such as:</p>
+          <ul class="space-y-2">
+            {[
+              'IP address',
+              'Browser type',
+              'Device information',
+              'Website usage behavior (via tracking tools)'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">2</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">How We Use Your Information</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">We use your information to:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Contact you regarding your epoxy or concrete coating project',
+              'Provide estimates and service information',
+              'Respond to inquiries',
+              'Schedule consultations',
+              'Send appointment reminders',
+              'Improve our marketing and advertising',
+              'Comply with legal obligations'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed font-semibold">We do not sell your personal information to third parties.</p>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">3</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Advertising & Tracking Technologies</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">Orlando Concrete Coatings uses tools such as:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Meta Pixel (Facebook & Instagram Ads)',
+              'Google Analytics',
+              'Website tracking technologies and cookies'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed mb-4">These tools help us:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Measure advertising performance',
+              'Improve user experience',
+              'Show relevant ads to interested users'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed mb-2">Meta may collect or receive information from our website and use that information to provide measurement services and targeted ads in accordance with their Data Policy.</p>
+          <p class="text-concrete-light leading-relaxed">You can adjust ad preferences through your Facebook or Instagram settings.</p>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">4</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Data Sharing</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">We may share your information with:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Internal staff',
+              'Trusted service providers (CRM, scheduling software, email platforms)',
+              'Advertising platforms (Meta, Google)'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed">We only share information necessary to operate our business and deliver services.</p>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">5</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Data Security</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed">We take reasonable administrative and technical measures to protect your personal information. However, no internet transmission is 100% secure.</p>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">6</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Your Privacy Rights</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">You may:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Request access to your personal data',
+              'Request correction of inaccurate information',
+              'Request deletion of your data',
+              'Opt out of marketing communications'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed mb-2">To make a request, contact us at:</p>
+          <div class="bg-surface p-4 space-y-1">
+            <p class="text-concrete-light text-sm"><strong class="text-primary">Email:</strong> <a href="mailto:yeleussizovtamerlan@gmail.com" class="text-accent hover:underline">yeleussizovtamerlan@gmail.com</a></p>
+            <p class="text-concrete-light text-sm"><strong class="text-primary">Phone:</strong> <a href="tel:3218319421" class="text-accent hover:underline">+1 321-831-9421</a></p>
+          </div>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">7</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Cookies</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">Our website may use cookies to:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Improve website functionality',
+              'Analyze traffic',
+              'Track advertising performance'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed">You may disable cookies in your browser settings.</p>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">8</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Third-Party Links</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed">Our website or ads may link to third-party websites. We are not responsible for their privacy practices.</p>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">9</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Updates to This Policy</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed">We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised effective date.</p>
+        </div>
+
+        <!-- Section 10 -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">10</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Contact Us</h2>
+          </div>
+          <div class="bg-surface p-6 space-y-2">
+            <p class="font-heading font-bold text-primary uppercase text-sm tracking-wider">Orlando Concrete Coatings</p>
+            <p class="text-concrete-light text-sm">Serving Central Florida</p>
+            <p class="text-concrete-light text-sm"><strong class="text-primary">Email:</strong> <a href="mailto:yeleussizovtamerlan@gmail.com" class="text-accent hover:underline">yeleussizovtamerlan@gmail.com</a></p>
+            <p class="text-concrete-light text-sm"><strong class="text-primary">Phone:</strong> <a href="tel:3218319421" class="text-accent hover:underline">+1 321-831-9421</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

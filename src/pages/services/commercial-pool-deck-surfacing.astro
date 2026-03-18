@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+
+const faqs = [
+  { q: "How do you minimize disruption to guests and residents?", a: "We use phased scheduling to keep portions of the pool area accessible throughout the project. Work is coordinated with property management to avoid peak usage times, and we maintain clean, safe barriers around active work zones." },
+  { q: "Are your pool deck coatings ADA compliant?", a: "Yes. Every commercial pool deck coating includes anti-slip texture additives that meet or exceed ADA slip-resistance standards. We provide documentation for your compliance records and can coordinate with inspectors if needed." },
+  { q: "How long does a commercial pool deck project take?", a: "Timeline depends on the deck size and phasing requirements. A typical 3,000–5,000 sq ft pool deck takes 3–5 days. Larger properties or phased projects may take 1–2 weeks. We provide a detailed schedule before work begins." },
+  { q: "Do you carry insurance for commercial projects?", a: "Yes. We carry full general liability and workers' compensation insurance at commercial-grade coverage levels. Certificates of insurance are provided to property managers and HOA boards upon request." },
+  { q: "Can you match coatings across multiple pool areas or phases?", a: "Absolutely. We use batch-matched materials and documented color formulas to ensure consistent appearance across multiple pool areas, buildings, or project phases — even if completed months apart." },
+  { q: "What is the cost for commercial pool deck surfacing?", a: "Commercial pool deck coatings typically range from $5–$12 per square foot depending on surface condition, total area, access requirements, and finish selection. Volume pricing is available for large properties. We provide free on-site estimates with transparent, all-inclusive pricing." }
+];
+---
+
+<Layout title="Commercial Pool Deck Surfacing Florida — Hotels, HOAs & Resorts" description="Commercial pool deck surfacing in Florida for condominiums, HOAs, hotels, and resorts. ADA-compliant, slip-resistant coatings with phased scheduling and minimal disruption. Free estimates — (321) 831-9421." preloadImage="/images/pool-deck.webp">
+  <Hero
+    title="Commercial Pool Deck Surfacing in Florida"
+    subtitle="ADA-compliant, slip-resistant coatings for condominiums, HOAs, hotels, and resorts — with phased scheduling to minimize disruption"
+    backgroundImage="/images/pool-deck.webp"
+    compact
+  />
+
+  <!-- What's Included -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">What's Included</h2>
+          <p class="text-lg text-concrete-light mb-8">Every commercial pool deck surfacing project includes large-scale preparation and safety-focused materials built for high-traffic environments.</p>
+          <ul class="space-y-3">
+            {[
+              'Free on-site property assessment and scope review',
+              'Coordination with property management and HOA boards',
+              'Large-area moisture and adhesion testing',
+              'Commercial pressure washing and surface cleaning',
+              'Diamond grinding or shot blasting preparation',
+              'All crack, joint, expansion, and spalling repairs',
+              'ADA-compliant anti-slip texture system',
+              'Cool-deck heat-reflective coating options',
+              'Decorative flake, quartz, or textured finish',
+              'UV-stable polyaspartic topcoat for Florida sun',
+              'Phased scheduling to maintain pool access',
+              'Written warranty with commercial terms'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="relative">
+          <img src="/images/pool-deck.webp" srcset="/images/pool-deck-640w.webp 640w, /images/pool-deck.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Commercial pool deck surfacing with slip-resistant coating Florida" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property Types We Serve -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Property Types We Serve</h2>
+        <p class="text-lg text-concrete-light max-w-2xl mx-auto">We specialize in commercial pool deck surfacing for properties across Florida that need durable, safe, and attractive pool areas.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: 'fa-solid fa-building', title: 'Condominiums', desc: 'Condominium pool deck surfacing in Florida designed for shared amenity spaces. We coordinate with condo boards, work around resident schedules, and deliver finishes that enhance property value.' },
+          { icon: 'fa-solid fa-people-roof', title: 'HOA Communities', desc: 'HOA pool deck surfacing in Florida for community pools and clubhouse areas. We handle board approval documentation, phased timelines, and consistent finishes across multiple amenity zones.' },
+          { icon: 'fa-solid fa-hotel', title: 'Hotels', desc: 'Hotel pool deck surfacing in Florida that meets hospitality standards. Quick-cure systems minimize downtime, and premium finishes create the guest experience your property demands.' },
+          { icon: 'fa-solid fa-umbrella-beach', title: 'Resorts', desc: 'Resort pool deck surfacing in Florida for large-scale aquatic areas. We handle multi-pool complexes, lazy rivers, splash pads, and surrounding deck areas with phased scheduling.' },
+          { icon: 'fa-solid fa-city', title: 'Commercial Properties', desc: 'Commercial pool deck surfacing for apartment complexes, fitness centers, water parks, and mixed-use developments. Built for heavy foot traffic and year-round Florida weather.' }
+        ].map((item) => (
+          <div class="bg-surface p-8 border-b-4 border-transparent hover:border-accent transition-all">
+            <i class={`${item.icon} text-accent text-2xl mb-4 block`}></i>
+            <h3 class="font-heading font-bold text-primary text-lg uppercase tracking-wider mb-3">{item.title}</h3>
+            <p class="text-concrete-light text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="py-20 md:py-28 topo-bg relative">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Our Commercial Pool Deck Surfacing Process</h2>
+        <p class="text-white/60 max-w-2xl mx-auto">Engineered for commercial properties — we schedule around guests and residents to keep your pool area operational.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        {[
+          { icon: 'fa-solid fa-clipboard-check', step: '1', title: 'Site Assessment', desc: 'Property walkthrough, deck condition evaluation, and scope documentation for management approval' },
+          { icon: 'fa-solid fa-calendar-check', step: '2', title: 'Scheduling', desc: 'Phased timeline coordinated with property management to minimize guest and resident disruption' },
+          { icon: 'fa-solid fa-gears', step: '3', title: 'Preparation', desc: 'Commercial-grade grinding, crack repair, and surface profiling with area barriers in place' },
+          { icon: 'fa-solid fa-paint-roller', step: '4', title: 'Application', desc: 'Multi-coat system with ADA-compliant anti-slip finish applied in scheduled phases' },
+          { icon: 'fa-solid fa-circle-check', step: '5', title: 'Inspection', desc: 'Slip-resistance testing, final walkthrough with property manager, and warranty documentation' }
+        ].map((item) => (
+          <div class="text-center">
+            <div class="w-16 h-16 bg-accent skew-x-[-4deg] flex items-center justify-center mx-auto mb-5">
+              <i class={`${item.icon} text-primary text-xl skew-x-[4deg]`}></i>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-white uppercase tracking-wider mb-2">{item.step}. {item.title}</h3>
+            <p class="text-white/60 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div class="relative">
+          <img src="/images/before-after.webp" srcset="/images/before-after-640w.webp 640w, /images/before-after.webp 1024w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Commercial pool deck resurfacing before and after Florida" class="w-full shadow-2xl" width="1024" height="1024" loading="lazy" />
+          <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 -z-10"></div>
+        </div>
+        <div>
+          <div class="w-12 h-1 bg-accent mb-4"></div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Why Choose Us for Commercial Pool Deck Surfacing</h2>
+          <div class="space-y-5">
+            {[
+              { icon: 'fa-solid fa-file-shield', title: 'Licensed & Fully Insured', desc: 'Full general liability and workers\' compensation coverage at commercial levels. Certificates of insurance provided to property managers and HOA boards.' },
+              { icon: 'fa-solid fa-clock', title: 'Minimal Disruption', desc: 'We schedule around pool hours, guest check-ins, and resident usage. Quick-cure polyaspartic systems allow next-day foot traffic on completed sections.' },
+              { icon: 'fa-solid fa-calendar-days', title: 'Phased Scheduling', desc: 'Large pool decks are completed in planned phases so a portion of the pool area remains accessible throughout the project.' },
+              { icon: 'fa-solid fa-ruler-combined', title: 'Large-Area Experience', desc: 'From 2,000 to 20,000+ square feet, we have the equipment, crew, and materials to handle commercial-scale pool deck projects efficiently.' }
+            ].map((item) => (
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <i class={`${item.icon} text-accent text-sm`}></i>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-primary uppercase text-sm tracking-wider">{item.title}</h3>
+                  <p class="text-concrete-light text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Commercial Pool Deck Surfacing FAQs</h2>
+      </div>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <details class="group bg-surface p-6">
+            <summary class="flex items-center justify-between cursor-pointer list-none">
+              <h3 class="font-heading font-bold text-primary text-sm uppercase tracking-wider pr-4">{faq.q}</h3>
+              <i class="fa-solid fa-chevron-down text-accent text-xs group-open:rotate-180 transition-transform flex-shrink-0"></i>
+            </summary>
+            <p class="text-concrete-light text-sm leading-relaxed mt-4">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  })} />
+
+  <!-- Service Area -->
+  <section class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Commercial Pool Deck Surfacing Service Area</h2>
+      <p class="text-lg text-concrete-light max-w-3xl mx-auto mb-8">We provide commercial pool deck surfacing for properties throughout Central Florida.</p>
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        {['Orlando', 'Winter Park', 'Kissimmee', 'Lake Nona', 'Dr. Phillips', 'Windermere', 'Ocoee', 'Sanford', 'Clermont', 'Altamonte Springs', 'Apopka', 'Winter Garden'].map((city) => (
+          <span class="bg-surface px-4 py-2 font-heading text-xs uppercase tracking-wider text-concrete border border-surface-dark">
+            <i class="fa-solid fa-location-dot text-accent mr-1"></i>{city}
+          </span>
+        ))}
+      </div>
+      <a href="/locations" class="inline-flex items-center gap-2 text-accent font-heading font-bold text-sm uppercase tracking-wider hover:gap-3 transition-all">
+        View All Service Areas <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-1 bg-accent mx-auto mb-4"></div>
+      <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-4">Upgrade Your Commercial Pool Deck</h2>
+      <p class="text-xl text-concrete-light max-w-2xl mx-auto mb-10">Schedule a free property assessment. We'll evaluate your pool deck and provide a detailed proposal tailored to your property's needs.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-block bg-accent hover:bg-accent-dark text-primary px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-arrow-right"></i>Get Your Free Quote</span>
+        </a>
+        <a href="tel:3218319421" class="inline-block bg-primary hover:bg-primary-light text-white px-10 py-4 font-heading font-bold uppercase tracking-wider transition-colors skew-x-[-4deg]">
+          <span class="skew-x-[4deg] inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i>(321) 831-9421</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

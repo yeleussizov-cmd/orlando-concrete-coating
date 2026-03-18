@@ -1,0 +1,309 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Terms & Conditions — Orlando Concrete Coatings" description="Terms & Conditions for Orlando Concrete Coatings. Review the terms governing use of our website and services.">
+  <Hero
+    title="Terms & Conditions"
+    subtitle="Terms governing use of our website and services"
+    compact
+    ctaText=""
+  />
+
+  <section class="py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white p-8 md:p-12 shadow-sm">
+        <p class="text-concrete-light text-sm mb-8"><strong class="text-primary">Effective Date:</strong> 2/25/26</p>
+
+        <p class="text-concrete-light leading-relaxed mb-4">
+          Welcome to Orlando Concrete Coatings ("Company," "we," "our," or "us"). By accessing our website, submitting a lead form, requesting an estimate, or using our services, you agree to the following Terms & Conditions.
+        </p>
+        <p class="text-concrete-light leading-relaxed mb-10">
+          If you do not agree with these terms, please do not use our website or services.
+        </p>
+
+        <!-- Section 1 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">1</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Services</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">Orlando Concrete Coatings provides epoxy, polyaspartic, and decorative concrete coating services throughout Central Florida. All services are subject to availability, site inspection, and written agreement.</p>
+          <p class="text-concrete-light leading-relaxed">Quotes and estimates are valid for the time period specified in the proposal and may be adjusted based on site conditions discovered during preparation.</p>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">2</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Use of Website</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">By using our website, you agree to:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Provide accurate and truthful information',
+              'Not misuse or attempt to interfere with website functionality',
+              'Not use the website for unlawful purposes'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed">We reserve the right to modify or discontinue website access at any time without notice.</p>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">3</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Estimates & Project Agreements</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">All pricing provided:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Is based on visible site conditions at the time of inspection',
+              'May be adjusted if unforeseen conditions are discovered',
+              'Is not final until confirmed in a written agreement'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed">A signed agreement and deposit (if required) are necessary before scheduling services.</p>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">4</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Payment Terms</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">Payment terms will be outlined in your written project agreement. Failure to remit payment as agreed may result in:</p>
+          <ul class="space-y-2">
+            {[
+              'Suspension of work',
+              'Collection actions',
+              'Applicable late fees'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">5</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Warranty Disclaimer</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">Any warranty offered will be outlined in writing in your service agreement. Surface conditions, moisture issues, substrate integrity, and prior coatings may affect final results.</p>
+          <p class="text-concrete-light leading-relaxed mb-4">We do not guarantee against:</p>
+          <ul class="space-y-2">
+            {[
+              'Acts of nature',
+              'Structural shifting',
+              'Improper maintenance',
+              'Customer-caused damage'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">6</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Limitation of Liability</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">To the fullest extent permitted by law, Orlando Concrete Coatings shall not be liable for indirect, incidental, or consequential damages arising from:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Website use',
+              'Advertising interactions',
+              'Project delays outside our control',
+              'Conditions not disclosed at time of estimate'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed">Total liability shall not exceed the amount paid for services rendered.</p>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">7</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Intellectual Property</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">All website content including:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Text',
+              'Images',
+              'Logos',
+              'Graphics'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed">Is the property of Orlando Concrete Coatings and may not be copied or used without written permission.</p>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">8</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Marketing & Communications Consent</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">By submitting your information through our website, Meta (Facebook/Instagram) lead forms, or any advertisement, you agree that:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'We may contact you by phone, text message, or email regarding your inquiry',
+              'Standard message and data rates may apply',
+              'Consent is not a condition of purchase'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-accent text-xs mt-1.5"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed mb-4">You may opt out of marketing communications at any time by:</p>
+          <ul class="space-y-2">
+            {[
+              'Replying STOP to text messages',
+              'Clicking unsubscribe in emails',
+              'Contacting us directly'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">9</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">SMS Messaging Terms</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">If you opt in to receive SMS messages from Orlando Concrete Coatings:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Message frequency varies',
+              'Message and data rates may apply',
+              'You can reply STOP to unsubscribe',
+              'Reply HELP for assistance'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed">We do not sell or share mobile numbers with third parties for marketing purposes.</p>
+        </div>
+
+        <!-- Section 10 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">10</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Third-Party Advertising Platforms</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed mb-4">We use advertising tools including:</p>
+          <ul class="space-y-2 mb-6">
+            {[
+              'Meta (Facebook & Instagram)',
+              'Google Ads',
+              'Website tracking technologies'
+            ].map((item) => (
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[5px] mt-2"></i>
+                <span class="text-concrete-light">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-concrete-light leading-relaxed">These platforms may collect information in accordance with their own privacy policies.</p>
+        </div>
+
+        <!-- Section 11 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">11</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Governing Law</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed">These Terms & Conditions shall be governed by the laws of the State of Florida. Any disputes shall be resolved in the appropriate courts located in Central Florida.</p>
+        </div>
+
+        <!-- Section 12 -->
+        <div class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">12</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Changes to Terms</h2>
+          </div>
+          <p class="text-concrete-light leading-relaxed">We reserve the right to update these Terms & Conditions at any time. Updates will be posted with a revised effective date.</p>
+        </div>
+
+        <!-- Section 13 -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <span class="font-heading font-bold text-accent text-sm">13</span>
+            </div>
+            <h2 class="text-xl font-heading font-bold text-primary uppercase tracking-wider">Contact Information</h2>
+          </div>
+          <div class="bg-surface p-6 space-y-2">
+            <p class="font-heading font-bold text-primary uppercase text-sm tracking-wider">Orlando Concrete Coatings</p>
+            <p class="text-concrete-light text-sm">Serving Central Florida</p>
+            <p class="text-concrete-light text-sm"><strong class="text-primary">Phone:</strong> <a href="tel:3218319421" class="text-accent hover:underline">+1 321-831-9421</a></p>
+            <p class="text-concrete-light text-sm"><strong class="text-primary">Email:</strong> <a href="mailto:yeleussizovtamerlan@gmail.com" class="text-accent hover:underline">yeleussizovtamerlan@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
