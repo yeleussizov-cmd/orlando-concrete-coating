@@ -141,6 +141,14 @@ import ContactForm from '../components/ContactForm.astro';
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
       }
+      // Track form submission as generate_lead conversion in GA4
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          'event_category': 'form',
+          'event_label': 'Contact Form',
+          'value': 1.0
+        });
+      }
     }
   </script>
 </Layout>
